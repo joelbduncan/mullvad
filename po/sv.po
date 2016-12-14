@@ -1,0 +1,668 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mullvad\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-21 17:27+0100\n"
+"PO-Revision-Date: 2015-09-14 14:32+0200\n"
+"Last-Translator: \n"
+"Language-Team: Swedish\n"
+"Language: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"The account has expired.\n"
+"\n"
+"Manage account?"
+msgstr ""
+"Tiden har gått ut.\n"
+"\n"
+"Hantera konto?"
+
+msgid ""
+"The TAP-Windows virtual network adapter is missing.\n"
+"\n"
+"Restore it by running the installation program again. (Quit the program "
+"first.)"
+msgstr ""
+"Den virtuella nätverksenheten TAP-Windows saknas.\n"
+"\n"
+"Återställ den genom att köra installationsprogrammet igen. (Avsluta "
+"programmet först.)"
+
+msgid ""
+"Obfsproxy is not installed.\n"
+"\n"
+"You can install it with:\n"
+"apt-get install obfsproxy\n"
+msgstr ""
+"Obfsproxy är inte installerat.\n"
+"\n"
+"Du kan installera det med:\n"
+"apt-get install obfsproxy\n"
+
+#, python-format
+msgid ""
+"Connection failed.\n"
+"\n"
+"Details:\n"
+"%s"
+msgstr ""
+"Anslutningen misslyckades.\n"
+"\n"
+"Detaljer:\n"
+"%s"
+
+msgid "Mullvad"
+msgstr "Mullvad"
+
+msgid "Connect"
+msgstr "Anslut"
+
+msgid "Disconnect"
+msgstr "Koppla från"
+
+msgid "Settings"
+msgstr "Inställningar"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Mullvad: connected"
+msgstr "Mullvad: ansluten"
+
+msgid "Mullvad: connecting"
+msgstr "Mullvad: ansluter"
+
+msgid "Mullvad: disconnected"
+msgstr "Mullvad: frånkopplad"
+
+msgid "Error"
+msgstr "fel"
+
+msgid "Welcome to Mullvad"
+msgstr "Välkommen till Mullvad"
+
+msgid ""
+"Your internet traffic is now encrypted \n"
+"and anonymized using the Mullvad servers \n"
+"in order to deny third parties access to \n"
+"your communication."
+msgstr ""
+"Nu krypteras och anonymiseras \n"
+"internettrafiken med hjälp av Mullvads \n"
+"servrar för att inte utomstående ska\n"
+"kunna ta del av din kommunikation."
+
+msgid ""
+"The account expires in {}.\n"
+"After that, time must be added\n"
+"to the account for continued\n"
+"use of the service."
+msgstr ""
+"Tiden på kontot är slut om {}.\n"
+"För att fortsätta använda tjänsten\n"
+"efter det måste kontotiden förlängas."
+
+msgid "Add time to the account"
+msgstr "Förläng"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "hours"
+msgstr "timmar"
+
+msgid "day"
+msgstr "dag"
+
+msgid "days"
+msgstr "dagar"
+
+msgid "Get started"
+msgstr "Kom igång"
+
+msgid "Please enter your account number:"
+msgstr "Var vänlig uppge ditt kontonummer:"
+
+msgid ""
+"Don't have an account? Create one\n"
+"on our website:"
+msgstr ""
+"Har du inget konto? Skapa ett på\n"
+"vår hemsida:"
+
+msgid ""
+"Your new account will include three\n"
+"free hours of VPN time."
+msgstr ""
+"Ditt nya konto kommer innehålla\n"
+"tre timmar gratis VPN-tid"
+
+msgid "Bad account number."
+msgstr "Felaktigt kontonummer."
+
+msgid "Error report"
+msgstr "Rapportera ett fel"
+
+msgid ""
+"To facilitate problem solving you can send debug information to mullvad.net."
+msgstr ""
+"För att underlätta lösningen av problem kan du skicka felsökningsinformation "
+"till mullvad.net."
+
+msgid "Your email address:"
+msgstr "Din epostadress:"
+
+msgid "Write a description of the problem:"
+msgstr "Beskriv problemet:"
+
+msgid "This information will be sent:"
+msgstr "Information som kommer att skickas:"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Send"
+msgstr "Skicka"
+
+msgid ""
+"Sending failed.\n"
+"\n"
+"Details:\n"
+msgstr ""
+"Sändningen misslyckades.\n"
+"\n"
+"Detaljer:\n"
+
+msgid "Configuration file"
+msgstr "Konfigurationsfil"
+
+msgid "Connected"
+msgstr "Ansluten"
+
+msgid "Disconnected"
+msgstr "Frånkopplad"
+
+msgid "Connecting"
+msgstr "Ansluter"
+
+msgid "Shutting down"
+msgstr "Avslutar"
+
+msgid "Account"
+msgstr "Konto"
+
+msgid "Time left: {}"
+msgstr "Tid kvar: {}"
+
+msgid "fetching ..."
+msgstr "hämtar ..."
+
+msgid "Connection"
+msgstr "Anslutning"
+
+msgid "Status: {}"
+msgstr "Tillstånd: {}"
+
+msgid "Country: {}"
+msgstr "Land: {}"
+
+msgid "IPv4: "
+msgstr "IPv4: "
+
+msgid "IPv6: "
+msgstr "IPv6: "
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Address: {}"
+msgstr "Adress: {}"
+
+msgid "Port: {}"
+msgstr "Portar: {}"
+
+msgid "Protocol: {}"
+msgstr "Protokoll: {}"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Current version: {}"
+msgstr "Nuvarande version: {}"
+
+msgid "Latest version: {}"
+msgstr "Senaste version: {}"
+
+msgid "hour"
+msgstr "timme"
+
+msgid "unknown"
+msgstr "okänt"
+
+msgid "Unable to fetch address"
+msgstr "Kunde ej hämta adress"
+
+msgid "error {}"
+msgstr "fel {}"
+
+msgid "none"
+msgstr "inget"
+
+msgid "Account number: "
+msgstr "Kontonummer: "
+
+msgid "Change account number"
+msgstr "Ändra kontonummer"
+
+msgid "Account management"
+msgstr "Hantera kontot"
+
+msgid "Network"
+msgstr "Nätverk"
+
+msgid "Ports: "
+msgstr "Portar:"
+
+msgid "Manage"
+msgstr "Hantera"
+
+msgid "Block the internet on connection failure"
+msgstr "Blockera internet om anslutningen bryts"
+
+msgid "Tunnel IPv6"
+msgstr "Tunnla IPv6"
+
+msgid "Stop DNS leaks"
+msgstr "Förhindra DNS-läckor"
+
+msgid "Any"
+msgstr "Vilket som helst"
+
+msgid "Country: "
+msgstr "Land: "
+
+msgid "Auto start"
+msgstr "Starta automatiskt"
+
+msgid "Advanced"
+msgstr "Avancerat"
+
+msgid "Enter the account number"
+msgstr "Ange kontonummer"
+
+msgid "Bad"
+msgstr "Felaktigt"
+
+msgid "none [port]"
+msgstr "ingen"
+
+msgid "Settings for Mullvad"
+msgstr "Inställningar för Mullvad"
+
+msgid "Austria"
+msgstr "Österrike"
+
+msgid "Australia"
+msgstr "Australien"
+
+msgid "Belgium"
+msgstr "Belgien"
+
+msgid "Bulgaria"
+msgstr "Bulgarien"
+
+msgid "Brazil"
+msgstr "Brasilien"
+
+msgid "Canada"
+msgstr "Kanada"
+
+msgid "Canada - Alberta"
+msgstr "Kanada - Alberta"
+
+msgid "Canada - British Columbia"
+msgstr "Kanada - British Columbia"
+
+msgid "Canada - Ontario"
+msgstr "Kanada - Ontario"
+
+msgid "Canada - Quebec"
+msgstr "Kanada - Quebec"
+
+msgid "Switzerland"
+msgstr "Schweiz"
+
+msgid "Czech Republic"
+msgstr "Tjeckien"
+
+msgid "Germany"
+msgstr "Tyskland"
+
+msgid "Denmark"
+msgstr "Danmark"
+
+msgid "Spain"
+msgstr "Spanien"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "France"
+msgstr "Frankrike"
+
+msgid "United Kingdom"
+msgstr "Storbritannien"
+
+msgid "United Kingdom - England"
+msgstr "Storbritannien - England"
+
+msgid "United Kingdom - Northern Ireland"
+msgstr "Storbritannien - Nordirland"
+
+msgid "United Kingdom - Scotland"
+msgstr "Storbritannien - Skottland"
+
+msgid "United Kingdom - Wales"
+msgstr "Storbritannien - Wales"
+
+msgid "Greece"
+msgstr "Grekland"
+
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+msgid "Hungary"
+msgstr "Ungern"
+
+msgid "Israel"
+msgstr "Israel"
+
+msgid "Iceland"
+msgstr "Island"
+
+msgid "Italy"
+msgstr "Italien"
+
+msgid "Japan"
+msgstr "Japan"
+
+msgid "South Korea"
+msgstr "Sydkorea"
+
+msgid "Lithuania"
+msgstr "Litauen"
+
+msgid "Morocco"
+msgstr "Marocko"
+
+msgid "Mexico"
+msgstr "Mexiko"
+
+msgid "Netherlands"
+msgstr "Nederländerna"
+
+msgid "Norway"
+msgstr "Norge"
+
+msgid "New Zealand"
+msgstr "Nya Zeeland"
+
+msgid "Poland"
+msgstr "Polen"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Romania"
+msgstr "Rumänien"
+
+msgid "Sweden"
+msgstr "Sverige"
+
+msgid "Sweden - Helsingborg"
+msgstr "Sverige - Helsingborg"
+
+msgid "Sweden - Gothenburg"
+msgstr "Sverige - Göteborg"
+
+msgid "Sweden - Malmö"
+msgstr "Sverige - Malmö"
+
+msgid "Sweden - Stockholm"
+msgstr "Sverige - Stockholm"
+
+msgid "Singapore"
+msgstr "Singapore"
+
+msgid "Taiwan"
+msgstr "Taiwan"
+
+msgid "Ukraine"
+msgstr "Ukraina"
+
+msgid "USA"
+msgstr "USA"
+
+msgid "USA - Alabama"
+msgstr "USA - Alabama"
+
+msgid "USA - Alaska"
+msgstr "USA - Alaska"
+
+msgid "USA - Arizona"
+msgstr "USA - Arizona"
+
+msgid "USA - Arkansas"
+msgstr "USA - Arkansas"
+
+msgid "USA - California"
+msgstr "USA - Kalifornien"
+
+msgid "USA - Colorado"
+msgstr "USA - Colorado"
+
+msgid "USA - Connecticut"
+msgstr "USA - Connecticut"
+
+msgid "USA - Delaware"
+msgstr "USA - Delaware"
+
+msgid "USA - Florida"
+msgstr "USA - Florida"
+
+msgid "USA - Georgia"
+msgstr "USA - Georgia"
+
+msgid "USA - Hawaii"
+msgstr "USA - Hawaii"
+
+msgid "USA - Idaho"
+msgstr "USA - Idaho"
+
+msgid "USA - Illinois"
+msgstr "USA - Illinois"
+
+msgid "USA - Indiana"
+msgstr "USA - Indiana"
+
+msgid "USA - Iowa"
+msgstr "USA - Iowa"
+
+msgid "USA - Kansas"
+msgstr "USA - Kansas"
+
+msgid "USA - Kentucky"
+msgstr "USA - Kentucky"
+
+msgid "USA - Louisiana"
+msgstr "USA - Louisiana"
+
+msgid "USA - Maine"
+msgstr "USA - Maine"
+
+msgid "USA - Maryland"
+msgstr "USA - Maryland"
+
+msgid "USA - Michigan"
+msgstr "USA - Michigan"
+
+msgid "USA - Minnesota"
+msgstr "USA - Minnesota"
+
+msgid "USA - Missouri"
+msgstr "USA - Missouri"
+
+msgid "USA - Montana"
+msgstr "USA - Montana"
+
+msgid "USA - Nebraska"
+msgstr "USA - Nebraska"
+
+msgid "USA - Nevada"
+msgstr "USA - Nevada"
+
+msgid "USA - New Hampshire"
+msgstr "USA - New Hampshire"
+
+msgid "USA - New Jersey"
+msgstr "USA - New Jersey"
+
+msgid "USA - New York"
+msgstr "USA - New York"
+
+msgid "USA - North Carolina"
+msgstr "USA - North Carolina"
+
+msgid "USA - North Dakota"
+msgstr "USA - North Dakota"
+
+msgid "USA - Ohio"
+msgstr "USA - Ohio"
+
+msgid "USA - Oklahoma"
+msgstr "USA - Oklahoma"
+
+msgid "USA - Oregon"
+msgstr "USA - Oregon"
+
+msgid "USA - Pennsylvania"
+msgstr "USA - Pennsylvania"
+
+msgid "USA - Rhode Island"
+msgstr "USA - Rhode Island"
+
+msgid "USA - South Carolina"
+msgstr "USA - South Carolina"
+
+msgid "USA - South Dakota"
+msgstr "USA - South Dakota"
+
+msgid "USA - Tennessee"
+msgstr "USA - Tennessee"
+
+msgid "USA - Texas"
+msgstr "USA - Texas"
+
+msgid "USA - Utah"
+msgstr "USA - Utah"
+
+msgid "USA - Vermont"
+msgstr "USA - Vermont"
+
+msgid "USA - Virginia"
+msgstr "USA - Virginia"
+
+msgid "USA - Washington"
+msgstr "USA - Washington"
+
+msgid "USA - West Virginia"
+msgstr "USA - West Virginia"
+
+msgid "USA - Wisconsin"
+msgstr "USA - Wisconsin"
+
+msgid "USA - Wyoming"
+msgstr "USA - Wyoming"
+
+msgid "Status"
+msgstr "Tillstånd"
+
+msgid "Help"
+msgstr "Hjälp"
+
+msgid "Port manager"
+msgstr "Porthanterare"
+
+msgid ""
+"Manage which public ports will be forwarded to\n"
+"your computer through the VPN tunnel.\n"
+"Only use this if you have a network service on\n"
+"your computer that needs to be accessible through\n"
+"the exit IP of the server you connect to.\n"
+"\n"
+"Example:\n"
+"If you get port 1234 forwarded and are connected\n"
+"to server se5.mullvad.net, then you will be\n"
+"reachable on se5x.mullvad.net:1234\n"
+"\n"
+"Changes take effect after reconnecting."
+msgstr ""
+"Administrera vilka publika portar som skall\n"
+"vidarebefordras till din dator genom VPN-tunneln.\n"
+"Använd endast detta om du har en nätverkstjänst på\n"
+"din dator som behöver vara nåbar via den IP som din\n"
+"VPN-trafik går ut genom.\n"
+"\n"
+"Exempel:\n"
+"Om du får port 1234 vidarebefordrad och är ansluten\n"
+"till se5.mullvad.net så kommer din dator vara nåbar\n"
+"på se5x.mullvad.net:1234\n"
+"\n"
+"Ändringar får verkan efter återanslutning."
+
+msgid "Add"
+msgstr "Lägg till"
+
+msgid "Remove"
+msgstr "Ta bort"
+
+msgid ""
+"Your settings.ini file was corrupt.\n"
+"A backup of your settings have been saved to:\n"
+msgstr ""
+"Din settings.ini-fil var korrupt.\n"
+"En kopia av dina inställningar har sparats till:\n"
+
+msgid ""
+"\n"
+"\n"
+"Your settings have been reset to default values."
+msgstr ""
+"\n"
+"\n"
+"Dina inställningar har återställts till ursprungsvärden."
+
+msgid ""
+"It seems that Mullvad is already running.\n"
+"Only one instance of Mullvad is allowed.\n"
+"\n"
+msgstr ""
+"Det verkar som att Mullvad redan är igång.\n"
+"Bara en instans av Mullvad är tillåtet.\n"
+"\n"
+
+msgid ""
+"This version of Mullvad does not support Windows XP. Please upgrade your "
+"operating system, or use a plain OpenVPN connection."
+msgstr ""
+"Den här versionen av Mullvad stödjer inte Windows XP. Var god uppgradera "
+"ditt operativsystem, eller använd OpenVPN."
+
+msgid ""
+"You are running Mullvad from the install image.\n"
+"This is not supported, you have to first copy the program to the "
+"Applications directory and run it from there."
+msgstr ""

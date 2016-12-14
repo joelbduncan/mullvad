@@ -1,0 +1,6 @@
+[console_scripts]
+mtunnel = mullvad.tunnelprocess:main
+
+[gui_scripts]
+mullvad = mullvad.mui:main
+

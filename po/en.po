@@ -1,0 +1,615 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mullvad\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-22 16:34+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"The account has expired.\n"
+"\n"
+"Manage account?"
+msgstr ""
+
+msgid ""
+"The TAP-Windows virtual network adapter is missing.\n"
+"\n"
+"Restore it by running the installation program again. (Quit the program "
+"first.)"
+msgstr ""
+
+msgid ""
+"Obfsproxy is not installed.\n"
+"\n"
+"You can install it with:\n"
+"apt-get install obfsproxy\n"
+msgstr ""
+
+#, python-format
+msgid ""
+"Connection failed.\n"
+"\n"
+"Details:\n"
+"%s"
+msgstr ""
+
+msgid "Mullvad"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Mullvad: connected"
+msgstr ""
+
+msgid "Mullvad: connecting"
+msgstr ""
+
+msgid "Mullvad: disconnected"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Welcome to Mullvad"
+msgstr ""
+
+msgid ""
+"Your internet traffic is now encrypted \n"
+"and anonymized using the Mullvad servers \n"
+"in order to deny third parties access to \n"
+"your communication."
+msgstr ""
+
+msgid ""
+"The account expires in {}.\n"
+"After that, time must be added\n"
+"to the account for continued\n"
+"use of the service."
+msgstr ""
+
+msgid "Add time to the account"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "day"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "Get started"
+msgstr ""
+
+msgid "Please enter your account number:"
+msgstr ""
+
+msgid ""
+"Don't have an account? Create one\n"
+"on our website:"
+msgstr ""
+
+msgid ""
+"Your new account will include three\n"
+"free hours of VPN time."
+msgstr ""
+
+msgid "Bad account number."
+msgstr ""
+
+msgid "Error report"
+msgstr ""
+
+msgid ""
+"To facilitate problem solving you can send debug information to mullvad.net."
+msgstr ""
+
+msgid "Your email address:"
+msgstr ""
+
+msgid "Write a description of the problem:"
+msgstr ""
+
+msgid "This information will be sent:"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid ""
+"Sending failed.\n"
+"\n"
+"Details:\n"
+msgstr ""
+
+msgid "Configuration file"
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Disconnected"
+msgstr ""
+
+msgid "Connecting"
+msgstr ""
+
+msgid "Shutting down"
+msgstr ""
+
+msgid "Account"
+msgstr ""
+
+msgid "Time left: {}"
+msgstr ""
+
+msgid "fetching ..."
+msgstr ""
+
+msgid "Connection"
+msgstr ""
+
+msgid "Status: {}"
+msgstr ""
+
+msgid "Country: {}"
+msgstr ""
+
+msgid "IPv4: "
+msgstr ""
+
+msgid "IPv6: "
+msgstr ""
+
+msgid "Server"
+msgstr ""
+
+msgid "Address: {}"
+msgstr ""
+
+msgid "Port: {}"
+msgstr ""
+
+msgid "Protocol: {}"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Current version: {}"
+msgstr ""
+
+msgid "Latest version: {}"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "unknown"
+msgstr ""
+
+msgid "Unable to fetch address"
+msgstr ""
+
+msgid "error {}"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "Account number: "
+msgstr ""
+
+msgid "Change account number"
+msgstr ""
+
+msgid "Account management"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "Ports: "
+msgstr ""
+
+msgid "Manage"
+msgstr ""
+
+msgid "Block the internet on connection failure"
+msgstr ""
+
+msgid "Tunnel IPv6"
+msgstr ""
+
+msgid "Stop DNS leaks"
+msgstr ""
+
+msgid "Any"
+msgstr ""
+
+msgid "Country: "
+msgstr ""
+
+msgid "Auto start"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Enter the account number"
+msgstr ""
+
+msgid "Bad"
+msgstr ""
+
+msgid "none [port]"
+msgstr ""
+
+msgid "Settings for Mullvad"
+msgstr ""
+
+msgid "Austria"
+msgstr ""
+
+msgid "Australia"
+msgstr ""
+
+msgid "Belgium"
+msgstr ""
+
+msgid "Bulgaria"
+msgstr ""
+
+msgid "Brazil"
+msgstr ""
+
+msgid "Canada"
+msgstr ""
+
+msgid "Canada - Alberta"
+msgstr ""
+
+msgid "Canada - British Columbia"
+msgstr ""
+
+msgid "Canada - Ontario"
+msgstr ""
+
+msgid "Canada - Quebec"
+msgstr ""
+
+msgid "Switzerland"
+msgstr ""
+
+msgid "Czech Republic"
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Denmark"
+msgstr ""
+
+msgid "Spain"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "France"
+msgstr ""
+
+msgid "United Kingdom"
+msgstr ""
+
+msgid "United Kingdom - England"
+msgstr ""
+
+msgid "United Kingdom - Northern Ireland"
+msgstr ""
+
+msgid "United Kingdom - Scotland"
+msgstr ""
+
+msgid "United Kingdom - Wales"
+msgstr ""
+
+msgid "Greece"
+msgstr ""
+
+msgid "Hong Kong"
+msgstr ""
+
+msgid "Hungary"
+msgstr ""
+
+msgid "Israel"
+msgstr ""
+
+msgid "Iceland"
+msgstr ""
+
+msgid "Italy"
+msgstr ""
+
+msgid "Japan"
+msgstr ""
+
+msgid "South Korea"
+msgstr ""
+
+msgid "Lithuania"
+msgstr ""
+
+msgid "Morocco"
+msgstr ""
+
+msgid "Mexico"
+msgstr ""
+
+msgid "Netherlands"
+msgstr ""
+
+msgid "Norway"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
+msgid "Poland"
+msgstr ""
+
+msgid "Portugal"
+msgstr ""
+
+msgid "Romania"
+msgstr ""
+
+msgid "Sweden"
+msgstr ""
+
+msgid "Sweden - Helsingborg"
+msgstr ""
+
+msgid "Sweden - Gothenburg"
+msgstr ""
+
+msgid "Sweden - Malmö"
+msgstr ""
+
+msgid "Sweden - Stockholm"
+msgstr ""
+
+msgid "Singapore"
+msgstr ""
+
+msgid "Taiwan"
+msgstr ""
+
+msgid "Ukraine"
+msgstr ""
+
+msgid "USA"
+msgstr ""
+
+msgid "USA - Alabama"
+msgstr ""
+
+msgid "USA - Alaska"
+msgstr ""
+
+msgid "USA - Arizona"
+msgstr ""
+
+msgid "USA - Arkansas"
+msgstr ""
+
+msgid "USA - California"
+msgstr ""
+
+msgid "USA - Colorado"
+msgstr ""
+
+msgid "USA - Connecticut"
+msgstr ""
+
+msgid "USA - Delaware"
+msgstr ""
+
+msgid "USA - Florida"
+msgstr ""
+
+msgid "USA - Georgia"
+msgstr ""
+
+msgid "USA - Hawaii"
+msgstr ""
+
+msgid "USA - Idaho"
+msgstr ""
+
+msgid "USA - Illinois"
+msgstr ""
+
+msgid "USA - Indiana"
+msgstr ""
+
+msgid "USA - Iowa"
+msgstr ""
+
+msgid "USA - Kansas"
+msgstr ""
+
+msgid "USA - Kentucky"
+msgstr ""
+
+msgid "USA - Louisiana"
+msgstr ""
+
+msgid "USA - Maine"
+msgstr ""
+
+msgid "USA - Maryland"
+msgstr ""
+
+msgid "USA - Michigan"
+msgstr ""
+
+msgid "USA - Minnesota"
+msgstr ""
+
+msgid "USA - Missouri"
+msgstr ""
+
+msgid "USA - Montana"
+msgstr ""
+
+msgid "USA - Nebraska"
+msgstr ""
+
+msgid "USA - Nevada"
+msgstr ""
+
+msgid "USA - New Hampshire"
+msgstr ""
+
+msgid "USA - New Jersey"
+msgstr ""
+
+msgid "USA - New York"
+msgstr ""
+
+msgid "USA - North Carolina"
+msgstr ""
+
+msgid "USA - North Dakota"
+msgstr ""
+
+msgid "USA - Ohio"
+msgstr ""
+
+msgid "USA - Oklahoma"
+msgstr ""
+
+msgid "USA - Oregon"
+msgstr ""
+
+msgid "USA - Pennsylvania"
+msgstr ""
+
+msgid "USA - Rhode Island"
+msgstr ""
+
+msgid "USA - South Carolina"
+msgstr ""
+
+msgid "USA - South Dakota"
+msgstr ""
+
+msgid "USA - Tennessee"
+msgstr ""
+
+msgid "USA - Texas"
+msgstr ""
+
+msgid "USA - Utah"
+msgstr ""
+
+msgid "USA - Vermont"
+msgstr ""
+
+msgid "USA - Virginia"
+msgstr ""
+
+msgid "USA - Washington"
+msgstr ""
+
+msgid "USA - West Virginia"
+msgstr ""
+
+msgid "USA - Wisconsin"
+msgstr ""
+
+msgid "USA - Wyoming"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Port manager"
+msgstr ""
+
+msgid ""
+"Manage which public ports will be forwarded to\n"
+"your computer through the VPN tunnel.\n"
+"Only use this if you have a network service on\n"
+"your computer that needs to be accessible through\n"
+"the exit IP of the server you connect to.\n"
+"\n"
+"Example:\n"
+"If you get port 1234 forwarded and are connected\n"
+"to server se5.mullvad.net, then you will be\n"
+"reachable on se5x.mullvad.net:1234\n"
+"\n"
+"Changes take effect after reconnecting."
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid ""
+"Your settings.ini file was corrupt.\n"
+"A backup of your settings have been saved to:\n"
+msgstr ""
+
+msgid ""
+"\n"
+"\n"
+"Your settings have been reset to default values."
+msgstr ""
+
+msgid ""
+"It seems that Mullvad is already running.\n"
+"Only one instance of Mullvad is allowed.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"This version of Mullvad does not support Windows XP. Please upgrade your "
+"operating system, or use a plain OpenVPN connection."
+msgstr ""
+
+msgid ""
+"You are running Mullvad from the install image.\n"
+"This is not supported, you have to first copy the program to the "
+"Applications directory and run it from there."
+msgstr ""

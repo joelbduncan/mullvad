@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Mullvad
+Comment=Anonymity and privacy
+Comment[en]=Anonymity and privacy
+Comment[sv]=Anonymitet och avlyssningsskydd
+Exec=mullvad
+Terminal=false
+Type=Application
+Icon=mullvad.png
+Categories=Network;

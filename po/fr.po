@@ -1,0 +1,676 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mullvad\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-22 16:34+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"The account has expired.\n"
+"\n"
+"Manage account?"
+msgstr ""
+"Votre compte a expiré.\n"
+"\n"
+"Gérer votre compte?"
+
+msgid ""
+"The TAP-Windows virtual network adapter is missing.\n"
+"\n"
+"Restore it by running the installation program again. (Quit the program "
+"first.)"
+msgstr ""
+"L'adaptateur de réseau virtuel TAP-Windows est manquant\n"
+"\n"
+"Vous pouvez le réinstaller en re-exécutant le programme d'installation "
+"(Fermer le logiciel d'abord.)"
+
+msgid ""
+"Obfsproxy is not installed.\n"
+"\n"
+"You can install it with:\n"
+"apt-get install obfsproxy\n"
+msgstr ""
+"Obfsproxy n'est pas installé.\n"
+"\n"
+"Vous pouvez l'installer avec:\n"
+"apt-get install obfsproxy\n"
+
+#, python-format
+msgid ""
+"Connection failed.\n"
+"\n"
+"Details:\n"
+"%s"
+msgstr ""
+"La connexion a échoué.\n"
+"\n"
+"Détails:\n"
+"%s"
+
+msgid "Mullvad"
+msgstr "Mullvad"
+
+msgid "Connect"
+msgstr "Connecter"
+
+msgid "Disconnect"
+msgstr "Déconnecter"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Quit"
+msgstr "Quitter"
+
+msgid "Mullvad: connected"
+msgstr "Mullvad: connecté"
+
+msgid "Mullvad: connecting"
+msgstr "Mullvad: connexion"
+
+msgid "Mullvad: disconnected"
+msgstr "Mullvad: déconnecté"
+
+#, fuzzy
+msgid "Error"
+msgstr "erreur"
+
+msgid "Welcome to Mullvad"
+msgstr "Bienvenue sur Mullvad"
+
+msgid ""
+"Your internet traffic is now encrypted \n"
+"and anonymized using the Mullvad servers \n"
+"in order to deny third parties access to \n"
+"your communication."
+msgstr ""
+"Votre connexion internet est maintenant\n"
+"anonyme et cryptée par les serveurs\n"
+"de Mullvad afin d'empêcher un tiers d'accéder\n"
+"à vos communications."
+
+msgid ""
+"The account expires in {}.\n"
+"After that, time must be added\n"
+"to the account for continued\n"
+"use of the service."
+msgstr ""
+"Le compte expire le {}.\n"
+"Après cette date, il est possible d'ajouter du temps\n"
+"pour continuer à utiliser le compte et profiter ainsi\n"
+"de la continuité du service."
+
+msgid "Add time to the account"
+msgstr "Ajouter du temps sur le compte"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "hours"
+msgstr "heures"
+
+msgid "day"
+msgstr "jour"
+
+msgid "days"
+msgstr "jours"
+
+msgid "Get started"
+msgstr "Commencer"
+
+msgid "Please enter your account number:"
+msgstr "Veuillez entrer votre numéro de compte:"
+
+msgid ""
+"Don't have an account? Create one\n"
+"on our website:"
+msgstr ""
+"Vous n'avez pas de compte ? Créez-en\n"
+"un sur notre site officiel :"
+
+msgid ""
+"Your new account will include three\n"
+"free hours of VPN time."
+msgstr ""
+"Votre nouveau compte comprend trois\n"
+"heures gratuites de connexion sur VPN."
+
+msgid "Bad account number."
+msgstr "Numéro de compte incorrect."
+
+msgid "Error report"
+msgstr "Rapport d'erreur"
+
+msgid ""
+"To facilitate problem solving you can send debug information to mullvad.net."
+msgstr ""
+"Pour faciliter la résolution du problème vous pouvez envoyer un rapport de "
+"débogage à mullvad.net."
+
+msgid "Your email address:"
+msgstr "Votre adresse e-mail:"
+
+msgid "Write a description of the problem:"
+msgstr "Écrivez une description du problème:"
+
+msgid "This information will be sent:"
+msgstr "Ces informations seront envoyées:"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid ""
+"Sending failed.\n"
+"\n"
+"Details:\n"
+msgstr ""
+"L'envoi a échoué.\n"
+"\n"
+"Détails:\n"
+
+msgid "Configuration file"
+msgstr "Fichier de configuration"
+
+msgid "Connected"
+msgstr "Connecté"
+
+msgid "Disconnected"
+msgstr "Déconnecté"
+
+msgid "Connecting"
+msgstr "Connexion"
+
+msgid "Shutting down"
+msgstr "Fermeture en cours"
+
+msgid "Account"
+msgstr "Compte"
+
+msgid "Time left: {}"
+msgstr "Temps restant: {}"
+
+msgid "fetching ..."
+msgstr "récupération..."
+
+msgid "Connection"
+msgstr "Connexion"
+
+msgid "Status: {}"
+msgstr "Statut: {}"
+
+msgid "Country: {}"
+msgstr "Pays: {}"
+
+msgid "IPv4: "
+msgstr "IPv4: "
+
+msgid "IPv6: "
+msgstr "IPv6: "
+
+msgid "Server"
+msgstr "Serveur"
+
+msgid "Address: {}"
+msgstr "Adresse: {}"
+
+msgid "Port: {}"
+msgstr "Ports: {}"
+
+msgid "Protocol: {}"
+msgstr "Protocole: {}"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Current version: {}"
+msgstr "Version actuelle: {}"
+
+msgid "Latest version: {}"
+msgstr "Dernière version: {}"
+
+msgid "hour"
+msgstr "heure"
+
+msgid "unknown"
+msgstr "inconnu"
+
+msgid "Unable to fetch address"
+msgstr "Impossible de récuper une adresse"
+
+msgid "error {}"
+msgstr "erreur {}"
+
+msgid "none"
+msgstr "aucun"
+
+msgid "Account number: "
+msgstr "Numéro de compte: "
+
+msgid "Change account number"
+msgstr "Changer le numéro de compte"
+
+msgid "Account management"
+msgstr "Gestion du compte"
+
+msgid "Network"
+msgstr "Réseau"
+
+msgid "Ports: "
+msgstr "Ports: "
+
+msgid "Manage"
+msgstr "Gérer"
+
+msgid "Block the internet on connection failure"
+msgstr "Bloquer Internet lors de l'échec de la connexion"
+
+msgid "Tunnel IPv6"
+msgstr "IPv6"
+
+msgid "Stop DNS leaks"
+msgstr "Empêcher les fuites DNS"
+
+msgid "Any"
+msgstr "Tout"
+
+msgid "Country: "
+msgstr "Pays: "
+
+msgid "Auto start"
+msgstr "Démarrage automatique"
+
+msgid "Advanced"
+msgstr "Avancé"
+
+msgid "Enter the account number"
+msgstr "Entrer le numéro de compte"
+
+msgid "Bad"
+msgstr "Mauvais"
+
+msgid "none [port]"
+msgstr "aucun [port]"
+
+msgid "Settings for Mullvad"
+msgstr "Paramètres de Mullvad"
+
+msgid "Austria"
+msgstr "Autriche"
+
+msgid "Australia"
+msgstr "Australie"
+
+msgid "Belgium"
+msgstr "Belgique"
+
+msgid "Bulgaria"
+msgstr "Bulgarie"
+
+msgid "Brazil"
+msgstr "Brésil"
+
+msgid "Canada"
+msgstr "Canada"
+
+msgid "Canada - Alberta"
+msgstr "Canada - Alberta"
+
+msgid "Canada - British Columbia"
+msgstr "Canada - Colombie-Britannique"
+
+msgid "Canada - Ontario"
+msgstr "Canada - Ontario"
+
+msgid "Canada - Quebec"
+msgstr "Canada - Québec"
+
+msgid "Switzerland"
+msgstr "Suisse"
+
+msgid "Czech Republic"
+msgstr "République tchèque"
+
+msgid "Germany"
+msgstr "Allemagne"
+
+msgid "Denmark"
+msgstr "Danemark"
+
+msgid "Spain"
+msgstr "Espagne"
+
+msgid "Finland"
+msgstr "Finlande"
+
+msgid "France"
+msgstr ""
+
+msgid "United Kingdom"
+msgstr "Royaume-Uni"
+
+#, fuzzy
+msgid "United Kingdom - England"
+msgstr "Royaume-Uni - Angleterre"
+
+msgid "United Kingdom - Northern Ireland"
+msgstr "Royaume-Uni - Irelande du Nord"
+
+#, fuzzy
+msgid "United Kingdom - Scotland"
+msgstr "Royaume-Uni - Écosse"
+
+#, fuzzy
+msgid "United Kingdom - Wales"
+msgstr "Royaume-Uni - pays de Galles"
+
+msgid "Greece"
+msgstr "Grèce"
+
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+msgid "Hungary"
+msgstr "Hongrie"
+
+msgid "Israel"
+msgstr "Israël"
+
+msgid "Iceland"
+msgstr "Islande"
+
+msgid "Italy"
+msgstr "Italie"
+
+msgid "Japan"
+msgstr "Japon"
+
+msgid "South Korea"
+msgstr "Corée du Sud"
+
+msgid "Lithuania"
+msgstr "Lituanie"
+
+msgid "Morocco"
+msgstr "Maroc"
+
+msgid "Mexico"
+msgstr "Mexique"
+
+msgid "Netherlands"
+msgstr "Pays-Bas"
+
+msgid "Norway"
+msgstr "Norvège"
+
+msgid "New Zealand"
+msgstr "Nouvelle-Zélande"
+
+msgid "Poland"
+msgstr "Pologne"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Romania"
+msgstr "Roumanie"
+
+msgid "Sweden"
+msgstr "Suède"
+
+msgid "Sweden - Helsingborg"
+msgstr "Suède - Helsingborg"
+
+msgid "Sweden - Gothenburg"
+msgstr "Suède - Gothembourg"
+
+msgid "Sweden - Malmö"
+msgstr "Suède - Malmö"
+
+msgid "Sweden - Stockholm"
+msgstr "Suède - Stockholm"
+
+msgid "Singapore"
+msgstr "Singapour"
+
+msgid "Taiwan"
+msgstr "Taïwan"
+
+msgid "Ukraine"
+msgstr "Ukraine"
+
+msgid "USA"
+msgstr "États-Unis"
+
+msgid "USA - Alabama"
+msgstr "États-Unis - Alabama"
+
+msgid "USA - Alaska"
+msgstr "États-Unis - Alaska"
+
+msgid "USA - Arizona"
+msgstr "États-Unis - Arizona"
+
+msgid "USA - Arkansas"
+msgstr "États-Unis - Arkansas"
+
+msgid "USA - California"
+msgstr "États-Unis - Californie"
+
+msgid "USA - Colorado"
+msgstr "États-Unis - Colorado"
+
+msgid "USA - Connecticut"
+msgstr "États-Unis - Connecticut"
+
+msgid "USA - Delaware"
+msgstr "États-Unis - Delaware"
+
+msgid "USA - Florida"
+msgstr "États-Unis - Floride"
+
+msgid "USA - Georgia"
+msgstr "États-Unis - Géorgie"
+
+msgid "USA - Hawaii"
+msgstr "États-Unis - Hawaï"
+
+msgid "USA - Idaho"
+msgstr "États-Unis - Idaho"
+
+msgid "USA - Illinois"
+msgstr "États-Unis - Illinois"
+
+msgid "USA - Indiana"
+msgstr "États-Unis - Indiana"
+
+msgid "USA - Iowa"
+msgstr "États-Unis - Iowa"
+
+msgid "USA - Kansas"
+msgstr "États-Unis - Kansas"
+
+msgid "USA - Kentucky"
+msgstr "États-Unis - Kentucky"
+
+msgid "USA - Louisiana"
+msgstr "États-Unis - Louisiane"
+
+msgid "USA - Maine"
+msgstr "États-Unis - Maine"
+
+msgid "USA - Maryland"
+msgstr "États-Unis - Maryland"
+
+msgid "USA - Michigan"
+msgstr "États-Unis - Michigan"
+
+msgid "USA - Minnesota"
+msgstr "États-Unis - Minnesota"
+
+msgid "USA - Missouri"
+msgstr "États-Unis - Missouri"
+
+msgid "USA - Montana"
+msgstr "États-Unis - Montana"
+
+msgid "USA - Nebraska"
+msgstr "États-Unis - Nebraska"
+
+msgid "USA - Nevada"
+msgstr "États-Unis - Nevada"
+
+msgid "USA - New Hampshire"
+msgstr "États-Unis - New Hampshire"
+
+msgid "USA - New Jersey"
+msgstr "États-Unis - New Jersey"
+
+msgid "USA - New York"
+msgstr "États-Unis - New York"
+
+msgid "USA - North Carolina"
+msgstr "États-Unis - Caroline du Nord"
+
+msgid "USA - North Dakota"
+msgstr "États-Unis - Dakota du Nord"
+
+msgid "USA - Ohio"
+msgstr "États-Unis - Ohio"
+
+msgid "USA - Oklahoma"
+msgstr "États-Unis - Oklahoma"
+
+msgid "USA - Oregon"
+msgstr "États-Unis - Oregon"
+
+msgid "USA - Pennsylvania"
+msgstr "États-Unis - Pennsylvanie"
+
+msgid "USA - Rhode Island"
+msgstr "États-Unis - Rhode Island"
+
+msgid "USA - South Carolina"
+msgstr "États-Unis - Caroline du Sud"
+
+msgid "USA - South Dakota"
+msgstr "États-Unis - Dakota du Sud"
+
+msgid "USA - Tennessee"
+msgstr "États-Unis - Tennessee"
+
+msgid "USA - Texas"
+msgstr "États-Unis - Texas"
+
+msgid "USA - Utah"
+msgstr "États-Unis - Utah"
+
+msgid "USA - Vermont"
+msgstr "États-Unis - Vermont"
+
+msgid "USA - Virginia"
+msgstr "États-Unis - Virginie"
+
+msgid "USA - Washington"
+msgstr "États-Unis - Washington"
+
+msgid "USA - West Virginia"
+msgstr "États-Unis - Virginie-Occidentale"
+
+msgid "USA - Wisconsin"
+msgstr "États-Unis - Wisconsin"
+
+msgid "USA - Wyoming"
+msgstr "États-Unis - Wyoming"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Help"
+msgstr "Aide"
+
+msgid "Port manager"
+msgstr "Gestionnaire de port"
+
+msgid ""
+"Manage which public ports will be forwarded to\n"
+"your computer through the VPN tunnel.\n"
+"Only use this if you have a network service on\n"
+"your computer that needs to be accessible through\n"
+"the exit IP of the server you connect to.\n"
+"\n"
+"Example:\n"
+"If you get port 1234 forwarded and are connected\n"
+"to server se5.mullvad.net, then you will be\n"
+"reachable on se5x.mullvad.net:1234\n"
+"\n"
+"Changes take effect after reconnecting."
+msgstr ""
+"Configurer les ports publics qui seront relayés vers \n"
+"votre ordinateur à travers le tunnel VPN.\n"
+"Utiliser uniquement cette configuration si vous avez sur votre \n"
+"ordinateur un service réseau qui a besoin d'être accessible \n"
+"à travers l'adresse IP de sortie du serveur sur lequel vous êtes connecté.\n"
+"\n"
+"Exemple:\n"
+"Si le port 1234 est relayé vers vous et que vous êtes\n"
+"connecté sur le serveur se5.mullvad.net, alors vous \n"
+"serez joinable sur se5x.mullvad.net:1234\n"
+"\n"
+"Les modifications ne prennent effet qu'après reconnexion."
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Remove"
+msgstr "Supprimer"
+
+msgid ""
+"Your settings.ini file was corrupt.\n"
+"A backup of your settings have been saved to:\n"
+msgstr ""
+"Votre fichier settings.ini est corrompu\n"
+"Vos paramètres de configuration ont été sauvegardés ici:\n"
+
+msgid ""
+"\n"
+"\n"
+"Your settings have been reset to default values."
+msgstr ""
+"\n"
+"\n"
+"Votre configuration a été réinitialisée aux valeurs par défaut."
+
+msgid ""
+"It seems that Mullvad is already running.\n"
+"Only one instance of Mullvad is allowed.\n"
+"\n"
+msgstr ""
+"Il semblerait que Mullvad est déjà en cours d'exécution.\n"
+"Une seule instance de Mullvad est autorisée.\n"
+"\n"
+
+msgid ""
+"This version of Mullvad does not support Windows XP. Please upgrade your "
+"operating system, or use a plain OpenVPN connection."
+msgstr ""
+"Cette version de Mullvad ne supporte pas Windows XP. Veuillez mettre à jour "
+"votre système d'exploitation, ou utilisez une simple connexion OpenVPN."
+
+msgid ""
+"You are running Mullvad from the install image.\n"
+"This is not supported, you have to first copy the program to the "
+"Applications directory and run it from there."
+msgstr ""
+"Vous utilisez Mullvad à partir de l'image d'installation.\n"
+"Ceci n'est pas pris en charge, vous devez d'abord copier le programme dans "
+"le dossier d'Applications et le lancer de là."

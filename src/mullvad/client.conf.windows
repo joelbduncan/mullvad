@@ -1,0 +1,52 @@
+client
+
+dev tun
+
+proto udp
+
+# Keep trying indefinitely to resolve the
+# host name of the OpenVPN server.  Very useful
+# on machines which are not permanently connected
+# to the internet such as laptops.
+resolv-retry infinite
+
+# Most clients don't need to bind to
+# a specific local port number.
+nobind
+
+# Try to preserve some state across restarts.
+persist-key
+persist-tun
+
+# Enable compression on the VPN link.
+comp-lzo
+
+# Set log file verbosity.
+verb 3
+
+# Require that the server is using a server certificate.
+# This prevents another client from impersonating a server.
+remote-cert-tls server
+
+ping-exit 60
+
+ping 10
+
+# File containing trusted Certificate Authorities.
+# This file can have multiple certificates in .pem
+# format, concatenated together. Note that an
+# Intermediate CA (master.mullvad.net) is present.
+# This is to ensure that OpenVPN can always verify
+# the CRL (crl.pem).
+ca ssl/ca.crt
+
+# Check if the server the client is connecting to presents
+# a revoked server certificate. If so the client stops
+# connecting.
+crl-verify ssl/crl.pem
+# Windows-specific
+# Daemonize
+service mullvadopenvpn
+
+# Limit range of possible TLS cipher-suites
+tls-cipher TLS-DHE-RSA-WITH-AES-256-CBC-SHA:TLS-DHE-RSA-WITH-CAMELLIA-256-CBC-SHA:TLS-DHE-RSA-WITH-3DES-EDE-CBC-SHA:TLS-DHE-RSA-WITH-AES-128-CBC-SHA:TLS-DHE-RSA-WITH-SEED-CBC-SHA:TLS-DHE-RSA-WITH-CAMELLIA-128-CBC-SHA

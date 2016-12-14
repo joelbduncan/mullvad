@@ -1,0 +1,10 @@
+include LICENSE.txt
+include CHANGES.rst
+include AUTHORS.rst
+include README.rst
+include copyright
+recursive-include po *
+recursive-include icons *
+
+recursive-include src/mullvad *
+recursive-exclude src/mullvad *.pyc

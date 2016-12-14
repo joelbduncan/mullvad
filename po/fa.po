@@ -1,0 +1,660 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mullvad\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-16 19:59+0100\n"
+"PO-Revision-Date: 2016-11-22 15:30+0100\n"
+"Last-Translator: \n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+msgid ""
+"The account has expired.\n"
+"\n"
+"Manage account?"
+msgstr ""
+"اعتبار حساب تمام شده.‬\n"
+"‫‫مدیریت حساب کاربری؟"
+
+msgid ""
+"The TAP-Windows virtual network adapter is missing.\n"
+"\n"
+"Restore it by running the installation program again. (Quit the program "
+"first.)"
+msgstr ""
+"آداپتور شبکه مجازی TAB-Windows از دست رفته است.‬\n"
+"‫‫توسط نصب مجدد برنامه آن را بازیابی کنید. (اول از برنامه خارج شود.)"
+
+msgid ""
+"Obfsproxy is not installed.\n"
+"\n"
+"You can install it with:\n"
+"apt-get install obfsproxy\n"
+msgstr ""
+"‫Obfsproxy نصب نشده است.‬\n"
+"‫‫شما می توانید آن را نصب کنید با دستور:‬\n"
+"‫‏‫apt-get install obfsproxy‬\n"
+
+#, python-format
+msgid ""
+"Connection failed.\n"
+"\n"
+"Details:\n"
+"%s"
+msgstr ""
+"اتصال ناموفق.‬\n"
+"‫‫جزئیات:‬\n"
+"‫‏‫%s"
+
+msgid "Mullvad"
+msgstr "‫Mullvad"
+
+msgid "Connect"
+msgstr "اتصال"
+
+msgid "Disconnect"
+msgstr "قطع اتصال"
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Quit"
+msgstr "خارج شوید"
+
+msgid "Mullvad: connected"
+msgstr "‫Mullvad: متصل"
+
+msgid "Mullvad: connecting"
+msgstr "‫Mullvad: در حال اتصال"
+
+msgid "Mullvad: disconnected"
+msgstr "‫Mullvad: اتصال قطع شد"
+
+msgid "Error"
+msgstr "خطا"
+
+msgid "Welcome to Mullvad"
+msgstr "‫Welcome to Mullvad"
+
+msgid ""
+"Your internet traffic is now encrypted \n"
+"and anonymized using the Mullvad servers \n"
+"in order to deny third parties access to \n"
+"your communication."
+msgstr ""
+"به منظور رد دسترسی شخص ثالث به ارتباطات شما ترافیک اینترنت شما‬\n"
+" با استفاده از سرورهای مول واد کاملا رمزگذاری و پنهان شده است ‫\n"
+"‬"
+
+msgid ""
+"The account expires in {}.\n"
+"After that, time must be added\n"
+"to the account for continued\n"
+"use of the service."
+msgstr ""
+"اکانت شما‫در {} ‬ به اتمام می رسد {} .\n"
+"‫‫برای ادامه استفاده از سرویس‬‫ ‬باید زمان به حساب کاربری اضافه شود."
+
+msgid "Add time to the account"
+msgstr "اضافه کردن زمان به حساب کاربری"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "hours"
+msgstr "ساعت"
+
+msgid "day"
+msgstr "روز"
+
+msgid "days"
+msgstr "روز"
+
+msgid "Get started"
+msgstr "شروع کنیم"
+
+msgid "Please enter your account number:"
+msgstr "لطفا اکانت نامبر خود را وارد کنید : "
+
+msgid ""
+"Don't have an account? Create one\n"
+"on our website:"
+msgstr ""
+"حساب کاربری (اکانت نامبر) ندارید ؟‫ ‫می توانید در وب سایت مول واد یک حساب "
+"کاربری جدید بسازید.‬‬"
+
+msgid ""
+"Your new account will include three\n"
+"free hours of VPN time."
+msgstr "اکانت جدید شما شامل سه ساعت اعتبار رایگان خواهد بود."
+
+msgid "Bad account number."
+msgstr "شماره اکانت (اکانت نامبر) اشتباه است."
+
+msgid "Error report"
+msgstr "گزارش ارور"
+
+msgid ""
+"To facilitate problem solving you can send debug information to mullvad.net."
+msgstr ""
+"به منظور تسهیل در حل مشکلات و باگ ها شما می توانید اطلاعات اشکال زدایی یا "
+"دیباگ را به مول واد ارسال کنید."
+
+msgid "Your email address:"
+msgstr "ایمیل آدرس شما :"
+
+msgid "Write a description of the problem:"
+msgstr "یک توصیف در مورد مشکل بنویسید:"
+
+msgid "This information will be sent:"
+msgstr "این اطلاعات ارسال خواهد شد:"
+
+msgid "Cancel"
+msgstr "لغو کردن"
+
+msgid "Send"
+msgstr "ارسال"
+
+msgid ""
+"Sending failed.\n"
+"\n"
+"Details:\n"
+msgstr ""
+"ارسال ناموفق.‬\n"
+"‫‫‫جزئیات :\n"
+"‬\n"
+
+msgid "Configuration file"
+msgstr "‫Configuration file"
+
+msgid "Connected"
+msgstr "متصل"
+
+msgid "Disconnected"
+msgstr "اتصال قطع شده"
+
+msgid "Connecting"
+msgstr "در حال اتصال"
+
+msgid "Shutting down"
+msgstr "خاموش کردن"
+
+msgid "Account"
+msgstr "اکانت"
+
+msgid "Time left: {}"
+msgstr "زمان سپری شده: {}"
+
+msgid "fetching ..."
+msgstr "بازیابی ..."
+
+msgid "Connection"
+msgstr "اتصال"
+
+msgid "Status: {}"
+msgstr "وضعیت: {}"
+
+msgid "Country: {}"
+msgstr "کشور: {}"
+
+msgid "IPv4: "
+msgstr "ای پی v4 : "
+
+msgid "IPv6: "
+msgstr "ای پی v6 : "
+
+msgid "Server"
+msgstr "موقعیت سرور"
+
+msgid "Address: {}"
+msgstr "‫سرور آدرس : {}"
+
+msgid "Port: {}"
+msgstr "‫پورت اتصال : {}"
+
+msgid "Protocol: {}"
+msgstr "‫پروتکل : {}"
+
+msgid "Version"
+msgstr "ورژن کلاینت"
+
+msgid "Current version: {}"
+msgstr "ورژن فعلی : {}"
+
+msgid "Latest version: {}"
+msgstr "آخرین ورژن : {}"
+
+msgid "hour"
+msgstr "ساعت"
+
+msgid "unknown"
+msgstr "ناشناس"
+
+msgid "Unable to fetch address"
+msgstr "قادر به بازیابی آدرس نیست"
+
+msgid "error {}"
+msgstr "ارور {}"
+
+msgid "none"
+msgstr "هیچ کدام"
+
+msgid "Account number: "
+msgstr "اکانت نامبر : "
+
+msgid "Change account number"
+msgstr "تغییر اکانت نامبر"
+
+msgid "Account management"
+msgstr "مدیریت اکانت"
+
+msgid "Network"
+msgstr "شبکه"
+
+msgid "Ports: "
+msgstr "‫پورت ها : "
+
+msgid "Manage"
+msgstr "مدیریت"
+
+msgid "Block the internet on connection failure"
+msgstr "بلاک کردن اینترنت در اتصال های ناموفق"
+
+msgid "Tunnel IPv6"
+msgstr "تانل IPV6"
+
+msgid "Stop DNS leaks"
+msgstr "توقف نشت دی ان اس"
+
+msgid "Any"
+msgstr "فرقی نداره"
+
+msgid "Country: "
+msgstr "کشور : "
+
+msgid "Auto start"
+msgstr "شروع خودکار"
+
+msgid "Advanced"
+msgstr "پیشرفته"
+
+msgid "Enter the account number"
+msgstr "شماره اکانت را وارد کنید"
+
+msgid "Bad"
+msgstr "نادرست"
+
+msgid "none [port]"
+msgstr "هیچ کدام"
+
+msgid "Settings for Mullvad"
+msgstr "‫Settings for Mullvad"
+
+msgid "Austria"
+msgstr "اتریش"
+
+msgid "Australia"
+msgstr "استرالیا"
+
+msgid "Belgium"
+msgstr "بلژیک"
+
+msgid "Bulgaria"
+msgstr "بلغالستان"
+
+msgid "Brazil"
+msgstr "برزیل"
+
+msgid "Canada"
+msgstr "کانادا"
+
+msgid "Canada - Alberta"
+msgstr "کانادا - البرتا"
+
+msgid "Canada - British Columbia"
+msgstr "کانادا - بریتیش کلمبیا"
+
+msgid "Canada - Ontario"
+msgstr "کانادا - انتاریو"
+
+msgid "Canada - Quebec"
+msgstr "کانادا - کوبک"
+
+msgid "Switzerland"
+msgstr "سویس"
+
+msgid "Czech Republic"
+msgstr "جمهوری چک"
+
+msgid "Germany"
+msgstr "آلمان"
+
+msgid "Denmark"
+msgstr "دانمارک"
+
+msgid "Spain"
+msgstr "اسپانیا"
+
+msgid "Finland"
+msgstr "فنلاند"
+
+msgid "France"
+msgstr "فرانسه"
+
+msgid "United Kingdom"
+msgstr "بریتانیا"
+
+msgid "United Kingdom - England"
+msgstr "بریتانیا - انگلستان"
+
+msgid "United Kingdom - Northern Ireland"
+msgstr "بریتانیا - ایرلند شمالی"
+
+msgid "United Kingdom - Scotland"
+msgstr "بریتانیا - اسکاتلند"
+
+msgid "United Kingdom - Wales"
+msgstr "بریتانیا - ولز"
+
+msgid "Greece"
+msgstr "یونان"
+
+msgid "Hong Kong"
+msgstr "هنگ کنگ"
+
+msgid "Hungary"
+msgstr "مجارستان"
+
+msgid "Israel"
+msgstr "اسرائيل"
+
+msgid "Iceland"
+msgstr "ایسلند"
+
+msgid "Italy"
+msgstr "ایتالیا"
+
+msgid "Japan"
+msgstr "ژاپن"
+
+msgid "South Korea"
+msgstr "کره جنوبی"
+
+msgid "Lithuania"
+msgstr "لیتوانی"
+
+msgid "Morocco"
+msgstr "مراکش"
+
+msgid "Mexico"
+msgstr "مکزیک"
+
+msgid "Netherlands"
+msgstr "مکزیک"
+
+msgid "Norway"
+msgstr "نروژ"
+
+msgid "New Zealand"
+msgstr "نیوزیلند"
+
+msgid "Poland"
+msgstr "لهستان"
+
+msgid "Portugal"
+msgstr "پرتغال"
+
+msgid "Romania"
+msgstr "رومانی"
+
+msgid "Sweden"
+msgstr "سوئد"
+
+msgid "Sweden - Helsingborg"
+msgstr "سوئد - هلسینگ"
+
+msgid "Sweden - Gothenburg"
+msgstr "سوئد - گوتنبرگ"
+
+msgid "Sweden - Malmö"
+msgstr "سوئد - مالمو"
+
+msgid "Sweden - Stockholm"
+msgstr "سوئد - استکهلم"
+
+msgid "Singapore"
+msgstr "سنگاپور"
+
+msgid "Taiwan"
+msgstr "تایوان"
+
+msgid "Ukraine"
+msgstr "اوکراین"
+
+msgid "USA"
+msgstr "ایالات متحده"
+
+msgid "USA - Alabama"
+msgstr "ایالات متحده - آلاباما"
+
+msgid "USA - Alaska"
+msgstr "ایالات متحده - آلاسکا"
+
+msgid "USA - Arizona"
+msgstr "ایالات متحده - آریزونا"
+
+msgid "USA - Arkansas"
+msgstr "ایالات متحده - آرکانزاس"
+
+msgid "USA - California"
+msgstr "ایالات متحده - کالیفرنیا"
+
+msgid "USA - Colorado"
+msgstr "ایالات متحده - کلرادو"
+
+msgid "USA - Connecticut"
+msgstr "ایالات متحده - کانکتیکات"
+
+msgid "USA - Delaware"
+msgstr "ایالات متحده - دلاور"
+
+msgid "USA - Florida"
+msgstr "ایالات متحده - دلاور"
+
+msgid "USA - Georgia"
+msgstr "ایالات متحده - جورجیا"
+
+msgid "USA - Hawaii"
+msgstr "ایالات متحده - هاوایی"
+
+msgid "USA - Idaho"
+msgstr "ایالات متحده - آیداهو"
+
+msgid "USA - Illinois"
+msgstr "ایالات متحده - ایلینوی"
+
+msgid "USA - Indiana"
+msgstr "ایالات متحده - ایندیانا"
+
+msgid "USA - Iowa"
+msgstr "ایالات متحده - آیووا"
+
+msgid "USA - Kansas"
+msgstr "ایالات متحده - کانزاس"
+
+msgid "USA - Kentucky"
+msgstr "ایالات متحده - کنتاکی"
+
+msgid "USA - Louisiana"
+msgstr "ایالات متحده - لوئیزیانا"
+
+msgid "USA - Maine"
+msgstr "ایالات متحده - مین"
+
+msgid "USA - Maryland"
+msgstr "ایالات متحده - مریلند"
+
+msgid "USA - Michigan"
+msgstr "ایالات متحده - میشیگان"
+
+msgid "USA - Minnesota"
+msgstr "ایالات متحده - مینه سوتا"
+
+msgid "USA - Missouri"
+msgstr "ایالات متحده - میسوری"
+
+msgid "USA - Montana"
+msgstr "ایالات متحده - مونتانا"
+
+msgid "USA - Nebraska"
+msgstr "ایالات متحده - نبراسکا"
+
+msgid "USA - Nevada"
+msgstr "ایالات متحده - نوادا"
+
+msgid "USA - New Hampshire"
+msgstr "ایالات متحده - نیوهمپشایر"
+
+msgid "USA - New Jersey"
+msgstr "ایالات متحده - نیوجرسی"
+
+msgid "USA - New York"
+msgstr "ایالات متحده - نیویورک"
+
+msgid "USA - North Carolina"
+msgstr "ایالات متحده - کارولینای شمالی"
+
+msgid "USA - North Dakota"
+msgstr "ایالات متحده - داکوتای شمالی"
+
+msgid "USA - Ohio"
+msgstr "ایالات متحده - اوهایو"
+
+msgid "USA - Oklahoma"
+msgstr "ایالات متحده - اوکلاهما"
+
+msgid "USA - Oregon"
+msgstr "ایالات متحده - اورگان"
+
+msgid "USA - Pennsylvania"
+msgstr "ایالات متحده - پنسیلوانیا"
+
+msgid "USA - Rhode Island"
+msgstr "ایالات متحده - رود آیلند"
+
+msgid "USA - South Carolina"
+msgstr "ایالات متحده - کارولینای جنوبی"
+
+msgid "USA - South Dakota"
+msgstr "ایالات متحده - داکوتای جنوبی"
+
+msgid "USA - Tennessee"
+msgstr "ایالات متحده - تنسی"
+
+msgid "USA - Texas"
+msgstr "ایالات متحده - تگزاس"
+
+msgid "USA - Utah"
+msgstr "ایالات متحده - یوتا"
+
+msgid "USA - Vermont"
+msgstr "ایالات متحده - ورمونت"
+
+msgid "USA - Virginia"
+msgstr "ایالات متحده - ویرجینیا"
+
+msgid "USA - Washington"
+msgstr "ایالات متحده - واشنگتن"
+
+msgid "USA - West Virginia"
+msgstr "ایالات متحده - غرب ویرجینیا"
+
+msgid "USA - Wisconsin"
+msgstr "ایالات متحده - ویسکانسین"
+
+msgid "USA - Wyoming"
+msgstr "ایالات متحده - وایومینگ"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Help"
+msgstr "راهنما"
+
+msgid "Port manager"
+msgstr "‫Port manager"
+
+msgid ""
+"Manage which public ports will be forwarded to\n"
+"your computer through the VPN tunnel.\n"
+"Only use this if you have a network service on\n"
+"your computer that needs to be accessible through\n"
+"the exit IP of the server you connect to.\n"
+"\n"
+"Example:\n"
+"If you get port 1234 forwarded and are connected\n"
+"to server se5.mullvad.net, then you will be\n"
+"reachable on se5x.mullvad.net:1234\n"
+"\n"
+"Changes take effect after reconnecting."
+msgstr ""
+"مدیریت این که کدام پورت ها از طریق تانل وی پی ان\n"
+"‫‫‫به کامپیوتر شما فوروارد خواهند شد‫.‬\n"
+"‫‫اگر شما یک سرویس شبکه بر روی کامپیوترتان دارید‬\n"
+"‫‫‫و نیاز هست از طریق ای پی سروری که به آن وصل هستید\n"
+"‫‫‫ قابل دسترس باشید می توانید از این امکان استفاده کنید.‬\n"
+"‫‫‫مثال:\n"
+"‫‫‫اگر شما پورت فوروارد 1234 را دریافت کرده اید‬\n"
+"‫‫و به  سرور se5.mullvad.net وصل شده باشید ‫پس شما\n"
+"‫از طریق se5x.mullvad.net:1234 قابل دسترس خواهید بود‬\n"
+"‫‫‫تغییرات پس از اتصال مجددا اعمال خواهد شد."
+
+msgid "Add"
+msgstr "اضافه کردن"
+
+msgid "Remove"
+msgstr "حذف کردن"
+
+msgid ""
+"Your settings.ini file was corrupt.\n"
+"A backup of your settings have been saved to:\n"
+msgstr ""
+"فایل settings.ini شما خراب شده.‬\n"
+"‫‫یک پشتیبان از تنظیمات شما ذخیره شده است در:\n"
+
+msgid ""
+"\n"
+"\n"
+"Your settings have been reset to default values."
+msgstr ""
+"‫\n"
+"‬\n"
+"‫تنظیمات شما به مقدار اولیه برگشت."
+
+msgid ""
+"It seems that Mullvad is already running.\n"
+"Only one instance of Mullvad is allowed.\n"
+"\n"
+msgstr ""
+"به نظر می رسد که Mullvad در حال اجرا است.\n"
+"‫فقط یک نمونه از Mullvad مجاز است.\n"
+
+msgid ""
+"This version of Mullvad does not support Windows XP. Please upgrade your "
+"operating system, or use a plain OpenVPN connection."
+msgstr ""
+"این ورژن از mullvad ویندوز xp را پشتیبانی نمی کند لطفا سیستم عامل خود را "
+"ارتقا دهیدیا یک کانکشن ساده اوپن وی پی ان استفاده کنید."
+
+msgid ""
+"You are running Mullvad from the install image.\n"
+"This is not supported, you have to first copy the program to the "
+"Applications directory and run it from there."
+msgstr ""
+"شما فایل نصب مول واد را اجرا کرده اید.\n"
+"‫این روش پشتیبانی نمی شود شما اول باید فایل اپلیکیشن مول واد را به فولدر "
+"Applications انتقال بدید و سپس از آنجا اجرا کنید."
