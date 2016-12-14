@@ -51,9 +51,13 @@ else:
         pass
 
 try:
-    import gtk
-    gtk.remove_log_handlers()
-    import appindicator
+    if platform.linux_distribution()[0] == 'Fedora':
+        from gi.repository import Gtk as gtk
+        from gi.repository import AppIndicator3 as appindicator
+    else:
+        import gtk
+        gtk.remove_log_handlers()
+        import appindicator
     got_appindicator = True
 except ImportError:
     got_appindicator = False
