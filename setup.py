@@ -5,6 +5,16 @@ import glob
 import subprocess
 from setuptools import setup, find_packages
 
+rpm_dependencies = "python-appdirs, python-ipaddr, python-netifaces, python-psutil, wxPython"
+
+from setuptools.command.bdist_rpm import bdist_rpm
+def custom_make_spec_file(self):
+    spec = self._original_make_spec_file()
+    lineDescription = "%description"
+    spec.insert(spec.index(lineDescription) - 1, "requires: %s" % rpm_dependencies)
+    return spec
+bdist_rpm._original_make_spec_file = bdist_rpm._make_spec_file
+bdist_rpm._make_spec_file = custom_make_spec_file
 
 CLIENT_VERSION = None
 execfile('src/mullvad/version.py')
