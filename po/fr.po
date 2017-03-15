@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mullvad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-22 16:34+0100\n"
+"POT-Creation-Date: 2017-01-09 14:49+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: French\n"
@@ -633,6 +633,12 @@ msgstr "Ajouter"
 
 msgid "Remove"
 msgstr "Supprimer"
+
+msgid "No"
+msgstr "Non"
+
+msgid "Yes"
+msgstr "Oui"
 
 msgid ""
 "Your settings.ini file was corrupt.\n"

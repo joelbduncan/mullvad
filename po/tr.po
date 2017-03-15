@@ -2,23 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mullvad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 14:49+0100\n"
-"PO-Revision-Date: 2015-09-14 14:32+0200\n"
+"POT-Creation-Date: 2017-02-10 13:05+0100\n"
+"PO-Revision-Date: 2017-02-10 13:05+0100\n"
 "Last-Translator: \n"
-"Language-Team: Swedish\n"
-"Language: Swedish\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid ""
 "The account has expired.\n"
 "\n"
 "Manage account?"
 msgstr ""
-"Tiden har gått ut.\n"
-"\n"
-"Hantera konto?"
+"Hesabınızın süresi dolmuş.\n"
+"Hesabınızı yönetmek ister misiniz?"
 
 msgid ""
 "The TAP-Windows virtual network adapter is missing.\n"
@@ -26,10 +26,9 @@ msgid ""
 "Restore it by running the installation program again. (Quit the program "
 "first.)"
 msgstr ""
-"Den virtuella nätverksenheten TAP-Windows saknas.\n"
+"TAP-Sanal pencere adaptörü eksik.\n"
 "\n"
-"Återställ den genom att köra installationsprogrammet igen. (Avsluta "
-"programmet först.)"
+"Yüklemeyi yeniden çalıştırınız.(Önce programdan çıkın.)"
 
 msgid ""
 "Obfsproxy is not installed.\n"
@@ -37,10 +36,10 @@ msgid ""
 "You can install it with:\n"
 "apt-get install obfsproxy\n"
 msgstr ""
-"Obfsproxy är inte installerat.\n"
+"Obfsproxy kurulu değil.\n"
 "\n"
-"Du kan installera det med:\n"
-"apt-get install obfsproxy\n"
+"Lütfen aşağıdaki komut ile kurunuz:\n"
+"sudo apt-get install obfsproxy\n"
 
 #, python-format
 msgid ""
@@ -49,40 +48,40 @@ msgid ""
 "Details:\n"
 "%s"
 msgstr ""
-"Anslutningen misslyckades.\n"
+"Bağlantı hatası.\n"
 "\n"
-"Detaljer:\n"
+"Ayrıntılar:\n"
 "%s"
 
 msgid "Mullvad"
 msgstr "Mullvad"
 
 msgid "Connect"
-msgstr "Anslut"
+msgstr "Bağlan"
 
 msgid "Disconnect"
-msgstr "Koppla från"
+msgstr "Bağlantıyı kes"
 
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "Ayarlar"
 
 msgid "Quit"
-msgstr "Avsluta"
+msgstr "Çık"
 
 msgid "Mullvad: connected"
-msgstr "Mullvad: ansluten"
+msgstr "Mullvad: Bağlandı"
 
 msgid "Mullvad: connecting"
-msgstr "Mullvad: ansluter"
+msgstr "Mullvad: Bağlanıyor"
 
 msgid "Mullvad: disconnected"
-msgstr "Mullvad: frånkopplad"
+msgstr "Mullvad: Bağlantı kesildi"
 
 msgid "Error"
-msgstr "fel"
+msgstr "Hata"
 
 msgid "Welcome to Mullvad"
-msgstr "Välkommen till Mullvad"
+msgstr "Mullvad'a hoş geldiniz!"
 
 msgid ""
 "Your internet traffic is now encrypted \n"
@@ -90,10 +89,9 @@ msgid ""
 "in order to deny third parties access to \n"
 "your communication."
 msgstr ""
-"Nu krypteras och anonymiseras \n"
-"internettrafiken med hjälp av Mullvads \n"
-"servrar för att inte utomstående ska\n"
-"kunna ta del av din kommunikation."
+"Tüm internet trafiğiniz şifrelenir\n"
+"ve Mullvad sunucuları tarafından anonimleştirilir.\n"
+"Yetkisiz kişilerden sizi korur."
 
 msgid ""
 "The account expires in {}.\n"
@@ -101,113 +99,113 @@ msgid ""
 "to the account for continued\n"
 "use of the service."
 msgstr ""
-"Tiden på kontot är slut om {}.\n"
-"För att fortsätta använda tjänsten\n"
-"efter det måste kontotiden förlängas."
+"Hesabınızın süresi {} sonra dolacak.\n"
+"Hesabı kullanmaya devam edebilmek için\n"
+"hesabınıza zaman eklemelisiniz."
 
 msgid "Add time to the account"
-msgstr "Förläng"
+msgstr "Hesabınızın süresini uzatın"
 
 msgid "Close"
-msgstr "Stäng"
+msgstr "Kapalı"
 
 msgid "hours"
-msgstr "timmar"
+msgstr "saat"
 
 msgid "day"
-msgstr "dag"
+msgstr "gün"
 
 msgid "days"
-msgstr "dagar"
+msgstr "günler"
 
 msgid "Get started"
-msgstr "Kom igång"
+msgstr "Hemen başla"
 
 msgid "Please enter your account number:"
-msgstr "Var vänlig uppge ditt kontonummer:"
+msgstr "Lütfen hesap numaranızı girin"
 
 msgid ""
 "Don't have an account? Create one\n"
 "on our website:"
 msgstr ""
-"Har du inget konto? Skapa ett på\n"
-"vår hemsida:"
+"Hesabınız yok mu? Hemen bir tane oluşturun\n"
+"Website:"
 
 msgid ""
 "Your new account will include three\n"
 "free hours of VPN time."
 msgstr ""
-"Ditt nya konto kommer innehålla\n"
-"tre timmar gratis VPN-tid"
+"Yeni hesabınızı 3 saat boyunca\n"
+"özgürce kullanabilirsiniz"
 
 msgid "Bad account number."
-msgstr "Felaktigt kontonummer."
+msgstr "Kötü hesap numarası"
 
 msgid "Error report"
-msgstr "Rapportera ett fel"
+msgstr "Hata bildir"
 
 msgid ""
 "To facilitate problem solving you can send debug information to mullvad.net."
 msgstr ""
-"För att underlätta lösningen av problem kan du skicka felsökningsinformation "
-"till mullvad.net."
+"Sorun çözmeyi kolaylaştırmak için hata ayıklama bilgilerini mullvad.net'e "
+"gönderebilirsiniz."
 
 msgid "Your email address:"
-msgstr "Din epostadress:"
+msgstr "E-Mail adresiniz:"
 
 msgid "Write a description of the problem:"
-msgstr "Beskriv problemet:"
+msgstr "Sorunun açıklamasını yazın:"
 
 msgid "This information will be sent:"
-msgstr "Information som kommer att skickas:"
+msgstr "Bu bilgiler gönderilecektir:"
 
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Vazgeç"
 
 msgid "Send"
-msgstr "Skicka"
+msgstr "Gönder"
 
 msgid ""
 "Sending failed.\n"
 "\n"
 "Details:\n"
 msgstr ""
-"Sändningen misslyckades.\n"
+"Gönderme başarısız.\n"
 "\n"
-"Detaljer:\n"
+"Ayrıntılar:\n"
 
 msgid "Configuration file"
-msgstr "Konfigurationsfil"
+msgstr "Yapılanma dosyası"
 
 msgid "Connected"
-msgstr "Ansluten"
+msgstr "Bağlandı"
 
 msgid "Disconnected"
-msgstr "Frånkopplad"
+msgstr "Bağlantı kesildi"
 
 msgid "Connecting"
-msgstr "Ansluter"
+msgstr "Bağlanıyor"
 
 msgid "Shutting down"
-msgstr "Avslutar"
+msgstr "Kapatılıyor"
 
 msgid "Account"
-msgstr "Konto"
+msgstr "Hesap bilgileri"
 
 msgid "Time left: {}"
-msgstr "Tid kvar: {}"
+msgstr "Kalan zaman: {}"
 
 msgid "fetching ..."
-msgstr "hämtar ..."
+msgstr "Sorgulanıyor.."
 
 msgid "Connection"
-msgstr "Anslutning"
+msgstr "Bağlantı Bilgileri"
 
 msgid "Status: {}"
-msgstr "Tillstånd: {}"
+msgstr "Durum: {}"
 
 msgid "Country: {}"
-msgstr "Land: {}"
+msgstr "Ülke: {}"
 
 msgid "IPv4: "
 msgstr "IPv4: "
@@ -216,106 +214,106 @@ msgid "IPv6: "
 msgstr "IPv6: "
 
 msgid "Server"
-msgstr "Server"
+msgstr "Sunucu Bilgileri"
 
 msgid "Address: {}"
-msgstr "Adress: {}"
+msgstr "Adres: {}"
 
 msgid "Port: {}"
-msgstr "Portar: {}"
+msgstr "Port: {}"
 
 msgid "Protocol: {}"
-msgstr "Protokoll: {}"
+msgstr "Protokol: {}"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Sürüm Bilgileri"
 
 msgid "Current version: {}"
-msgstr "Nuvarande version: {}"
+msgstr "Mevcut sürüm: {}"
 
 msgid "Latest version: {}"
-msgstr "Senaste version: {}"
+msgstr "Son sürüm: {}"
 
 msgid "hour"
-msgstr "timme"
+msgstr "saat"
 
 msgid "unknown"
-msgstr "okänt"
+msgstr "bilinmeyen"
 
 msgid "Unable to fetch address"
-msgstr "Kunde ej hämta adress"
+msgstr "Adres alınamadı"
 
 msgid "error {}"
-msgstr "fel {}"
+msgstr "hata {}"
 
 msgid "none"
-msgstr "inget"
+msgstr "yok"
 
 msgid "Account number: "
-msgstr "Kontonummer: "
+msgstr "Hesab numaranız: "
 
 msgid "Change account number"
-msgstr "Ändra kontonummer"
+msgstr "Hesap numarasını değiştir"
 
 msgid "Account management"
-msgstr "Hantera kontot"
+msgstr "Hesap yönetimi"
 
 msgid "Network"
-msgstr "Nätverk"
+msgstr "Ağ"
 
 msgid "Ports: "
-msgstr "Portar:"
+msgstr "Portlar:"
 
 msgid "Manage"
-msgstr "Hantera"
+msgstr "Yönet"
 
 msgid "Block the internet on connection failure"
-msgstr "Blockera internet om anslutningen bryts"
+msgstr "Bağlantı kesildiğinde İnternet'i engelle"
 
 msgid "Tunnel IPv6"
-msgstr "Tunnla IPv6"
+msgstr "IPv6 koruması"
 
 msgid "Stop DNS leaks"
-msgstr "Förhindra DNS-läckor"
+msgstr "DNS sızıntısını durdur"
 
 msgid "Any"
-msgstr "Vilket som helst"
+msgstr "Herhangi biri"
 
 msgid "Country: "
-msgstr "Land: "
+msgstr "Ülke: "
 
 msgid "Auto start"
-msgstr "Starta automatiskt"
+msgstr "Otomatik başlat"
 
 msgid "Advanced"
-msgstr "Avancerat"
+msgstr "Gelişmiş"
 
 msgid "Enter the account number"
-msgstr "Ange kontonummer"
+msgstr "Hesap numaranızı giriniz"
 
 msgid "Bad"
-msgstr "Felaktigt"
+msgstr "Kötü"
 
 msgid "none [port]"
-msgstr "ingen"
+msgstr "yok [port]"
 
 msgid "Settings for Mullvad"
-msgstr "Inställningar för Mullvad"
+msgstr "Mullvad ayarları"
 
 msgid "Austria"
-msgstr "Österrike"
+msgstr "Avusturya"
 
 msgid "Australia"
-msgstr "Australien"
+msgstr "Avustralya"
 
 msgid "Belgium"
-msgstr "Belgien"
+msgstr "Belçika"
 
 msgid "Bulgaria"
-msgstr "Bulgarien"
+msgstr "Bulgaristan"
 
 msgid "Brazil"
-msgstr "Brasilien"
+msgstr "Brezilya"
 
 msgid "Canada"
 msgstr "Kanada"
@@ -333,268 +331,268 @@ msgid "Canada - Quebec"
 msgstr "Kanada - Quebec"
 
 msgid "Switzerland"
-msgstr "Schweiz"
+msgstr "İsviçre"
 
 msgid "Czech Republic"
-msgstr "Tjeckien"
+msgstr "Çekya"
 
 msgid "Germany"
-msgstr "Tyskland"
+msgstr "Almanya"
 
 msgid "Denmark"
-msgstr "Danmark"
+msgstr "Danimarka"
 
 msgid "Spain"
-msgstr "Spanien"
+msgstr "İspanya"
 
 msgid "Finland"
-msgstr "Finland"
+msgstr "Finlandiya"
 
 msgid "France"
-msgstr "Frankrike"
+msgstr "Fransa"
 
 msgid "United Kingdom"
-msgstr "Storbritannien"
+msgstr "Birleşik Krallık"
 
 msgid "United Kingdom - England"
-msgstr "Storbritannien - England"
+msgstr "Birleşik Krallık - İngiltere"
 
 msgid "United Kingdom - Northern Ireland"
-msgstr "Storbritannien - Nordirland"
+msgstr "Birleşik Krallık - Kuzey Irlanda"
 
 msgid "United Kingdom - Scotland"
-msgstr "Storbritannien - Skottland"
+msgstr "Birleşik Krallık - İskoçya"
 
 msgid "United Kingdom - Wales"
-msgstr "Storbritannien - Wales"
+msgstr "Birleşik Krallık - Galler"
 
 msgid "Greece"
-msgstr "Grekland"
+msgstr "Yunanistan"
 
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
 msgid "Hungary"
-msgstr "Ungern"
+msgstr "Macaristan"
 
 msgid "Israel"
-msgstr "Israel"
+msgstr "İsrail"
 
 msgid "Iceland"
-msgstr "Island"
+msgstr "İzlanda"
 
 msgid "Italy"
-msgstr "Italien"
+msgstr "İtalya"
 
 msgid "Japan"
-msgstr "Japan"
+msgstr "Japonya"
 
 msgid "South Korea"
-msgstr "Sydkorea"
+msgstr "Güney Kore"
 
 msgid "Lithuania"
-msgstr "Litauen"
+msgstr "Litvanya"
 
 msgid "Morocco"
-msgstr "Marocko"
+msgstr "Fas"
 
 msgid "Mexico"
-msgstr "Mexiko"
+msgstr "Meksika"
 
 msgid "Netherlands"
-msgstr "Nederländerna"
+msgstr "Hollanda"
 
 msgid "Norway"
-msgstr "Norge"
+msgstr "Norveç"
 
 msgid "New Zealand"
-msgstr "Nya Zeeland"
+msgstr "Yeni Zelanda"
 
 msgid "Poland"
-msgstr "Polen"
+msgstr "Polonya"
 
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "Portekiz"
 
 msgid "Romania"
-msgstr "Rumänien"
+msgstr "Romanya"
 
 msgid "Sweden"
-msgstr "Sverige"
+msgstr "İsveç"
 
 msgid "Sweden - Helsingborg"
-msgstr "Sverige - Helsingborg"
+msgstr "İsveç - Helsingborg"
 
 msgid "Sweden - Gothenburg"
-msgstr "Sverige - Göteborg"
+msgstr "İsveç - Gothenburg"
 
 msgid "Sweden - Malmö"
-msgstr "Sverige - Malmö"
+msgstr "İsveç - Malmö"
 
 msgid "Sweden - Stockholm"
-msgstr "Sverige - Stockholm"
+msgstr "İsveç - Stockholm"
 
 msgid "Singapore"
-msgstr "Singapore"
+msgstr "Singapur"
 
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "Tayvan"
 
 msgid "Ukraine"
-msgstr "Ukraina"
+msgstr "Ukrayna"
 
 msgid "USA"
-msgstr "USA"
+msgstr "ABD"
 
 msgid "USA - Alabama"
-msgstr "USA - Alabama"
+msgstr "ABD - Alabama"
 
 msgid "USA - Alaska"
-msgstr "USA - Alaska"
+msgstr "ABD - Alaska"
 
 msgid "USA - Arizona"
-msgstr "USA - Arizona"
+msgstr "ABD - Arizona"
 
 msgid "USA - Arkansas"
-msgstr "USA - Arkansas"
+msgstr "ABD - Arkansas"
 
 msgid "USA - California"
-msgstr "USA - Kalifornien"
+msgstr "ABD - California"
 
 msgid "USA - Colorado"
-msgstr "USA - Colorado"
+msgstr "ABD - Colorado"
 
 msgid "USA - Connecticut"
-msgstr "USA - Connecticut"
+msgstr "ABD - Connecticut"
 
 msgid "USA - Delaware"
-msgstr "USA - Delaware"
+msgstr "ABD - Delaware"
 
 msgid "USA - Florida"
-msgstr "USA - Florida"
+msgstr "ABD - Florida"
 
 msgid "USA - Georgia"
-msgstr "USA - Georgia"
+msgstr "ABD - Georgia"
 
 msgid "USA - Hawaii"
-msgstr "USA - Hawaii"
+msgstr "ABD - Hawaii"
 
 msgid "USA - Idaho"
-msgstr "USA - Idaho"
+msgstr "ABD - Idaho"
 
 msgid "USA - Illinois"
-msgstr "USA - Illinois"
+msgstr "ABD - Illinois"
 
 msgid "USA - Indiana"
-msgstr "USA - Indiana"
+msgstr "ABD - Indiana"
 
 msgid "USA - Iowa"
-msgstr "USA - Iowa"
+msgstr "ABD - Iowa"
 
 msgid "USA - Kansas"
-msgstr "USA - Kansas"
+msgstr "ABD - Kansas"
 
 msgid "USA - Kentucky"
-msgstr "USA - Kentucky"
+msgstr "ABD - Kentucky"
 
 msgid "USA - Louisiana"
-msgstr "USA - Louisiana"
+msgstr "ABD - Louisiana"
 
 msgid "USA - Maine"
-msgstr "USA - Maine"
+msgstr "ABD - Maine"
 
 msgid "USA - Maryland"
-msgstr "USA - Maryland"
+msgstr "ABD - Maryland"
 
 msgid "USA - Michigan"
-msgstr "USA - Michigan"
+msgstr "ABD - Michigan"
 
 msgid "USA - Minnesota"
-msgstr "USA - Minnesota"
+msgstr "ABD - Minnesota"
 
 msgid "USA - Missouri"
-msgstr "USA - Missouri"
+msgstr "ABD - Missouri"
 
 msgid "USA - Montana"
-msgstr "USA - Montana"
+msgstr "ABD - Montana"
 
 msgid "USA - Nebraska"
-msgstr "USA - Nebraska"
+msgstr "ABD - Nebraska"
 
 msgid "USA - Nevada"
-msgstr "USA - Nevada"
+msgstr "ABD - Nevada"
 
 msgid "USA - New Hampshire"
-msgstr "USA - New Hampshire"
+msgstr "ABD - New Hampshire"
 
 msgid "USA - New Jersey"
-msgstr "USA - New Jersey"
+msgstr "ABD - New Jersey"
 
 msgid "USA - New York"
-msgstr "USA - New York"
+msgstr "ABD - New York"
 
 msgid "USA - North Carolina"
-msgstr "USA - North Carolina"
+msgstr "ABD - North Carolina"
 
 msgid "USA - North Dakota"
-msgstr "USA - North Dakota"
+msgstr "ABD - North Dakota"
 
 msgid "USA - Ohio"
-msgstr "USA - Ohio"
+msgstr "ABD - Ohio"
 
 msgid "USA - Oklahoma"
-msgstr "USA - Oklahoma"
+msgstr "ABD - Oklahoma"
 
 msgid "USA - Oregon"
-msgstr "USA - Oregon"
+msgstr "ABD - Oregon"
 
 msgid "USA - Pennsylvania"
-msgstr "USA - Pennsylvania"
+msgstr "ABD - Pennsylvania"
 
 msgid "USA - Rhode Island"
-msgstr "USA - Rhode Island"
+msgstr "ABD - Rhode Island"
 
 msgid "USA - South Carolina"
-msgstr "USA - South Carolina"
+msgstr "ABD - South Carolina"
 
 msgid "USA - South Dakota"
-msgstr "USA - South Dakota"
+msgstr "ABD - South Dakota"
 
 msgid "USA - Tennessee"
-msgstr "USA - Tennessee"
+msgstr "ABD - Tennessee"
 
 msgid "USA - Texas"
-msgstr "USA - Texas"
+msgstr "ABD - Texas"
 
 msgid "USA - Utah"
-msgstr "USA - Utah"
+msgstr "ABD - Utah"
 
 msgid "USA - Vermont"
-msgstr "USA - Vermont"
+msgstr "ABD - Vermont"
 
 msgid "USA - Virginia"
-msgstr "USA - Virginia"
+msgstr "ABD - Virginia"
 
 msgid "USA - Washington"
-msgstr "USA - Washington"
+msgstr "ABD - Washington"
 
 msgid "USA - West Virginia"
-msgstr "USA - West Virginia"
+msgstr "ABD - West Virginia"
 
 msgid "USA - Wisconsin"
-msgstr "USA - Wisconsin"
+msgstr "ABD - Wisconsin"
 
 msgid "USA - Wyoming"
-msgstr "USA - Wyoming"
+msgstr "ABD - Wyoming"
 
 msgid "Status"
-msgstr "Tillstånd"
+msgstr "Durum"
 
 msgid "Help"
-msgstr "Hjälp"
+msgstr "Yardım"
 
 msgid "Port manager"
-msgstr "Porthanterare"
+msgstr "Port yönetimi"
 
 msgid ""
 "Manage which public ports will be forwarded to\n"
@@ -610,37 +608,35 @@ msgid ""
 "\n"
 "Changes take effect after reconnecting."
 msgstr ""
-"Administrera vilka publika portar som skall\n"
-"vidarebefordras till din dator genom VPN-tunneln.\n"
-"Använd endast detta om du har en nätverkstjänst på\n"
-"din dator som behöver vara nåbar via den IP som din\n"
-"VPN-trafik går ut genom.\n"
+"VPN sunucusu üzerinden hangi portu kullanacağınızı yönetin.\n"
+"Bilgisayarınızda, bağladığınız sunucunun çıkış IP'sinden\n"
+"erişilebilen bir şebeke servisiniz varsa, bunu kullanın.\n"
 "\n"
-"Exempel:\n"
-"Om du får port 1234 vidarebefordrad och är ansluten\n"
-"till se5.mullvad.net så kommer din dator vara nåbar\n"
-"på se5x.mullvad.net:1234\n"
+"Örneğin:\n"
+"1234 numaralı porttan bağlandınız.\n"
+"O zaman se5.mullvad.net sunucusu  se5x.mullvad.net:1234\n"
+"şeklinde olacaktır.\n"
 "\n"
-"Ändringar får verkan efter återanslutning."
+"Değişiklikler, yeniden bağlandıktan sonra etkili olur."
 
 msgid "Add"
-msgstr "Lägg till"
+msgstr "Ekle"
 
 msgid "Remove"
-msgstr "Ta bort"
+msgstr "Kaldır"
 
 msgid "No"
-msgstr "Nej"
+msgstr ""
 
 msgid "Yes"
-msgstr "Ja"
+msgstr ""
 
 msgid ""
 "Your settings.ini file was corrupt.\n"
 "A backup of your settings have been saved to:\n"
 msgstr ""
-"Din settings.ini-fil var korrupt.\n"
-"En kopia av dina inställningar har sparats till:\n"
+"Settings.ini dosyası bozulmuş.\n"
+"Tüm ayarlarınız şuraya yedeklendi:\n"
 
 msgid ""
 "\n"
@@ -649,26 +645,28 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Dina inställningar har återställts till ursprungsvärden."
+"Ayarlarınız varsayılan değerler ile değiştirildi."
 
 msgid ""
 "It seems that Mullvad is already running.\n"
 "Only one instance of Mullvad is allowed.\n"
 "\n"
 msgstr ""
-"Det verkar som att Mullvad redan är igång.\n"
-"Bara en instans av Mullvad är tillåtet.\n"
-"\n"
+"Görünüşe göre Mullvad zaten çalışıyor.\n"
+"Mullvad'ın yalnızca bir örneğine izin verilir.\n"
 
 msgid ""
 "This version of Mullvad does not support Windows XP. Please upgrade your "
 "operating system, or use a plain OpenVPN connection."
 msgstr ""
-"Den här versionen av Mullvad stödjer inte Windows XP. Var god uppgradera "
-"ditt operativsystem, eller använd OpenVPN."
+"Mullvad'in bu sürümü Windows XP'yi desteklemez. Lütfen işletim sisteminizi "
+"yükseltin veya düz bir OpenVPN bağlantısı kullanın."
 
 msgid ""
 "You are running Mullvad from the install image.\n"
 "This is not supported, you have to first copy the program to the "
 "Applications directory and run it from there."
 msgstr ""
+"Yükleme yansımasından Mullvad'i çalıştırıyorsunuz.\n"
+"Bu desteklenmiyor; önce programı Uygulamalar dizinine kopyalayıp oradan "
+"çalıştırmalısınız."

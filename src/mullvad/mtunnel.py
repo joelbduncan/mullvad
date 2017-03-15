@@ -24,7 +24,6 @@ from mullvad import dnsconfig
 from mullvad import firewall
 from mullvad import logger
 from mullvad import mullvadclient
-from mullvad import netcom
 from mullvad import obfsproxy
 from mullvad import proc
 from mullvad import route
@@ -44,7 +43,6 @@ _OPENVPN_MANAGEMENT_PORT = 7505
 
 _GW_CHECK_INTERVAL = 30
 
-_MASTER_ADDR = 'master.mullvad.net'
 _MASTER_VIA_RELAY_PORT = 53
 
 _SEND_RECV_BUFFERS_MIN = 8192
@@ -299,7 +297,8 @@ class Tunnel:
 
     def _connectMaster(self):
         master = None
-        for address, port in self._ordered_master_connection_addresses():
+        port = _MASTER_VIA_RELAY_PORT
+        for address in self._ordered_master_connection_addresses():
             # Add route to master/proxy if Stop DNS leaks enabled
             if self.settings.getboolean('delete_default_route'):
                 self.route_manager.route_add(address)
@@ -338,22 +337,17 @@ class Tunnel:
         random.shuffle(other_servers)
 
         custom_server = self._custom_server()
-
-        servers_to_try = []
         if custom_server is not None:
-            servers_to_try.append((custom_server.address,
-                                   _MASTER_VIA_RELAY_PORT))
+            servers_to_try = [custom_server.address]
         else:
-            servers_to_try += [
-                (ip, _MASTER_VIA_RELAY_PORT) for ip in preferred_servers]
+            servers_to_try = preferred_servers[:4]
 
-        # Try a direct connection to master if the first three preferred
-        # servers failed
-        servers_to_try.insert(3, (_MASTER_ADDR, netcom.defaultPort))
+        # Add a few totally random servers to the list of servers to try.
+        # Do this in case all preferred servers are down. Say the customer
+        # has selected one country where we have only few servers, and that
+        # data center goes down.
+        servers_to_try += other_servers[:2]
 
-        # If everything else failed, continue trying with all other servers
-        servers_to_try += [
-            (ip, _MASTER_VIA_RELAY_PORT) for ip in other_servers]
         return servers_to_try
 
     def _connectOpenVPN(self, server, port, proto, cipher, useObfsp=False):
@@ -379,7 +373,6 @@ class Tunnel:
             (bins.openvpn,),
             ('--config', ovpn_conf),
             ('--log', ovpn_log),
-            ('--proto', proto),
             ('--remote', server, str(port)),
             ('--cert', client_cert),
             ('--key', client_key),
@@ -388,8 +381,17 @@ class Tunnel:
             ('--cipher', cipher),
         ]
 
+        ovpn_version = self._get_openvpn_version()
+
         if self.settings.getboolean('tunnel_ipv6'):
             ovpn_args.append(('--tun-ipv6',))
+        elif ovpn_version[0] == 2 and ovpn_version[1] >= 4:
+            if proto in ['tcp', 'udp'] and not proto.endswith('4'):
+                proto = proto + '4'
+            ovpn_args.append(('--pull-filter', 'ignore', 'ifconfig-ipv6 '))
+            ovpn_args.append(('--pull-filter', 'ignore', 'route-ipv6 '))
+
+        ovpn_args.append(('--proto', proto))
 
         send_recv_buffers = self.settings.get('send_recv_buffers')
         if send_recv_buffers != 'auto':
@@ -509,6 +511,12 @@ class Tunnel:
             self.maybeBlockedByFirewall = False
         ovpnlog.close()
         return result
+
+    def _get_openvpn_version(self):
+        stdout = proc.run([bins.openvpn, '--version'])[1]
+        version_string = stdout.split(' ')[1]
+
+        return map(int, version_string.split('.'))
 
     def _monitor_openvpn(self):
         self.log.debug('Monitoring OpenVPN in separate thread')

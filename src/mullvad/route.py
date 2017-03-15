@@ -21,6 +21,7 @@ default_gw_filename = 'defaultgw'
 
 _IPV6_BLOCK_NETS = ['0000::/1', '8000::/1']
 _WIN_LO_INTERFACE = 1
+_WINDOWS_NO_NEW_PROCESSES_EXIT_CODE = -1073741502
 
 
 def get_route_manager():
@@ -42,6 +43,7 @@ class WindowsRouteManager(object):
         self.remove_old_format_backup()
         self._load_gateways()
         self.update_default_gateways()
+        self._windows_seems_to_be_shutting_down = False
 
     def update_default_gateways(self):
         """Update the local cache of default routes.
@@ -145,15 +147,30 @@ class WindowsRouteManager(object):
     def route_del(self, net, mask='255.255.255.255', dest='default'):
         # TODO(simonasker) This method is only kept as long as the old
         # interface needs to be maintained.
-        if dest == 'default':
+
+        if self._windows_seems_to_be_shutting_down:
+            self.log.warning("Not deleting route net: {}, mask: {}, dest:, {} "
+                             "because windows is shutting down",
+                             net, mask, dest)
+            return
+
+        if dest == 'default' or dest == 'reject':
             # TODO(simonasker) Choosing an empty string here will result in all
             # routes to the given net being removed. Just picking the first
             # gw in the list however might not give the correct one.
-            self.delete_route(net, mask, '')
-        elif dest == 'reject':
-            self.delete_route(net, mask, '')
-        else:
+            dest = ''
+
+        try:
             self.delete_route(net, mask, dest)
+        except proc.SubprocessError as e:
+            # Attempts to mitigate bug #324
+            # https://github.com/mullvad/mullvad-client/issues/324
+            if e.exit_code == _WINDOWS_NO_NEW_PROCESSES_EXIT_CODE:
+                self.log.warning("Unable to clean up routes when closing the "
+                                 "tunnel", e)
+                self._windows_seems_to_be_shutting_down = True
+            else:
+                raise
 
     def add_route(self, destination, mask, gateway, interface=None,
                   persistent=False):

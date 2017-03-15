@@ -106,6 +106,14 @@ def _get_proc_manager():
     return _proc_manager_instance
 
 
+class SubprocessError(RuntimeError):
+    def __init__(self, message, exit_code, stdout, stderr):
+        RuntimeError.__init__(self, message)
+        self.exit_code = exit_code
+        self.stdout = stdout
+        self.stderr = stderr
+
+
 class Proc(object):
     def __init__(self):
         self.log = logger.create_logger(self.__class__.__name__)
@@ -187,7 +195,7 @@ class Proc(object):
         if code != 0:
             msg = u'"{}" exited with code {}\nstderr: {}\n\nstdout: {}'.format(
                 format_args(args), code, stderr, stdout)
-            raise RuntimeError(msg)
+            raise SubprocessError(msg, code, stdout, stderr)
         return stdout
 
     def try_run(self, args, stdin=None):
@@ -213,10 +221,22 @@ class Proc(object):
             return stdout
 
     def _encode(self, text):
+        """Encodes the given unicode text object into a str."""
         return text.encode(self.encode_encoding)
 
     def _decode(self, text):
-        return text.decode(self.decode_encoding)
+        """Tries to decode the given str text into unicode.
+
+        If the preferred encodings does not exist on the system, the decoding
+        falls back to using the default encoding.
+        """
+        try:
+            return text.decode(self.decode_encoding)
+        except (LookupError, UnicodeDecodeError):
+            try:
+                return text.decode(self.encode_encoding)
+            except (LookupError, UnicodeDecodeError):
+                return text.decode(errors='replace')
 
     def _get_encode_encoding(self):
         encoding = locale.getdefaultlocale()[1]

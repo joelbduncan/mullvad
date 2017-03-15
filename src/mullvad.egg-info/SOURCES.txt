@@ -12,6 +12,7 @@ po/en.po
 po/fa.po
 po/fr.po
 po/sv.po
+po/tr.po
 src/mullvad/__init__.py
 src/mullvad/backupservers.txt
 src/mullvad/bins.py
@@ -62,6 +63,7 @@ src/mullvad/locale/en/LC_MESSAGES/mullvad.mo
 src/mullvad/locale/fa/LC_MESSAGES/mullvad.mo
 src/mullvad/locale/fr/LC_MESSAGES/mullvad.mo
 src/mullvad/locale/sv/LC_MESSAGES/mullvad.mo
+src/mullvad/locale/tr/LC_MESSAGES/mullvad.mo
 src/mullvad/ssl/ca.crt
 src/mullvad/ssl/crl.pem
 src/mullvad/ssl/master.mullvad.net.crt

@@ -1,3 +1,31 @@
+Mullvad 62 (2017-03-14)
+=======================
+- Make fewer connection attempts when fetching the server list before setting
+  up a tunnel. Should improve the time it takes to connect the VPN tunnel.
+- Add fallback for failed string decoding. Removes some crashes on systems with
+  certain languages. Experienced on Chinese Windows.
+- Make account expired dialog non-modal, thus not blocking the entire client.
+  Helps keep the leak protection active for cases where account time runs out
+  during active usage of the tunnel.
+- Add Turkish translation.
+- Add revoked server certificates to CRL.
+
+Windows specific
+----------------
+- Try to detect Windows shutdown and stop trying to change routes in that state.
+- Upgrade OpenVPN to 2.4.0 and OpenSSL to 1.0.2k.
+
+MacOS specific
+--------------
+- Upgrade OpenVPN to 2.4.0.
+
+Linux specific
+--------------
+- Add MULLVAD_USE_GTK3 environment variable to handle wxPython 3 differently.
+  Should make the client work on Fedora 25. Set the environment variable to
+  "yes" or "no" to toggle between the modes.
+
+
 Mullvad 61 (2016-11-23)
 =======================
 - Add more country and region names for better display of server location.

@@ -52,12 +52,19 @@ else:
 
 try:
     if platform.linux_distribution()[0] == 'Fedora':
+        print("Using GTK3")
+        import gi
+        gi.require_version('Gtk', '3.0')
+        gi.require_version('AppIndicator3', '0.1')
         from gi.repository import Gtk as gtk
+        from gi.repository import Gdk
         from gi.repository import AppIndicator3 as appindicator
     else:
+        print("Using GTK2")
         import gtk
         gtk.remove_log_handlers()
         import appindicator
+
     got_appindicator = True
 except ImportError:
     got_appindicator = False
@@ -126,12 +133,11 @@ class TrayUI():
             wx.CallAfter(dialog, None, message)
 
     def subscriptionDialog(self, parent, message):
+        self.log.debug("Showing subscription dialog")
         if options.quiet or options.startup:
             return
-        dlg = wx.MessageDialog(parent, message, _('Mullvad'), wx.YES_NO)
-        if dlg.ShowModal() == wx.ID_YES:
-            _open_subscription_management_webpage()
-        dlg.Destroy()
+        dlg = NonModalDialog(parent, _('Mullvad'), message)
+        dlg.Show(yes_callback=_open_subscription_management_webpage)
 
     def iconConnected(self):
         raise NotImplementedError
@@ -188,7 +194,7 @@ class TrayUI():
         except Exception, e:
             self.log.error('Exception from tunnel: %s', e)
 
-        # Destroy ramaining parts of tunnel
+        # Destroy remaining parts of tunnel
         self.tunnel.destroy()
 
     def OnTaskBarConnect(self, evt):
@@ -289,10 +295,10 @@ class AppIndicator(TrayUI):
         menu.append(quitItem)
 
         # The appindicator
-        self.ind = appindicator.Indicator('mullvad', 'mullvadr',
-                                          appindicator.CATEGORY_COMMUNICATIONS)
+        self.ind = appindicator.Indicator.new('mullvad', 'mullvadr',
+                                          appindicator.IndicatorCategory.COMMUNICATIONS)
         self.ind.set_menu(menu)
-        self.ind.set_status(appindicator.STATUS_ACTIVE)
+        self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
 
     def enableConnectMenu(self, enable):
         self.connectItem.set_sensitive(enable)
@@ -1534,10 +1540,10 @@ class SettingsWindow(wx.Frame):
             'pt': _('Portugal'),
             'ro': _('Romania'),
             'se': _('Sweden'),
-            'se-hbg': _('Sweden - Helsingborg'),
-            'se-gbg': _('Sweden - Gothenburg'),
-            'se-mmo': _(u'Sweden - Malmö'),
-            'se-sthml': _('Sweden - Stockholm'),
+            'se-hel': _('Sweden - Helsingborg'),
+            'se-got': _('Sweden - Gothenburg'),
+            'se-mma': _(u'Sweden - Malmö'),
+            'se-sto': _('Sweden - Stockholm'),
             'sg': _('Singapore'),
             'tw': _('Taiwan'),
             'ua': _('Ukraine'),
@@ -1825,6 +1831,72 @@ class KillerWindow(wx.Frame):
         self.Destroy()
 
 
+class NonModalDialog(wx.Frame):
+    def __init__(self, parent, title, message):
+        wx.Frame.__init__(
+            self,
+            parent,
+            title=title,
+            style=wx.CAPTION | wx.FRAME_TOOL_WINDOW)
+        self.log = logger.create_logger(self.__class__.__name__)
+
+        self.yes_callback = None
+        self.no_callback = None
+
+        self._create_gui(message)
+        self.yesbutton.Bind(wx.EVT_BUTTON, self._on_yes)
+        self.nobutton.Bind(wx.EVT_BUTTON, self._on_no)
+        self.Bind(wx.EVT_CLOSE, self._on_no)
+
+    def _create_gui(self, message):
+        panel = wx.Panel(self)
+
+        mainsizer = wx.BoxSizer(wx.VERTICAL)
+
+        ctrlsizer = wx.BoxSizer(wx.HORIZONTAL)
+        ctrlsizer.Add(wx.StaticText(panel, label=message),
+                      flag=wx.ALL, border=10)
+
+        mainsizer.Add(ctrlsizer, 1, wx.EXPAND)
+
+        buttonsizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.nobutton = wx.Button(panel, wx.ID_NO, _("No"))
+        self.yesbutton = wx.Button(panel, wx.ID_YES, _("Yes"))
+
+        buttonsizer.Add(self.yesbutton, 0, wx.ALIGN_CENTER | wx.ALL, 5)
+        buttonsizer.Add(self.nobutton, 0, wx.ALIGN_CENTER | wx.ALL, 5)
+
+        mainsizer.Add(buttonsizer)
+
+        panel.SetSizer(mainsizer)
+        panel.Layout()
+        mainsizer.Fit(self)
+        self.yesbutton.SetDefault()
+
+    def Show(self, yes_callback=None, no_callback=None):
+        self.yes_callback = yes_callback
+        self.no_callback = no_callback
+
+        wx.Frame.Show(self)
+        self.Raise()
+
+    def _on_yes(self, event):
+        self.log.debug("Yes clicked")
+        try:
+            if self.yes_callback:
+                self.yes_callback()
+        finally:
+            self.Destroy()
+
+    def _on_no(self, event):
+        self.log.debug("No clicked")
+        try:
+            if self.no_callback:
+                self.no_callback()
+        finally:
+            self.Destroy()
+
+
 def _open_subscription_management_webpage():
     webbrowser.open(_SUBSCRIPTION_MANAGEMENT_URL)
 
@@ -2027,7 +2099,7 @@ def _create_tunnel(settings):
 def _start_gui(app, root_window, log, settings, tunnel):
     if got_appindicator:
         tray_ui = AppIndicator(root_window, tunnel, settings)
-        gtk.gdk.threads_init()
+        Gdk.threads_init()
     else:
         tray_ui = TunnelTaskBarIcon(root_window, tunnel, settings)
     app.tray_ui = tray_ui
