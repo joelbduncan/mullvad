@@ -295,10 +295,18 @@ class AppIndicator(TrayUI):
         menu.append(quitItem)
 
         # The appindicator
-        self.ind = appindicator.Indicator.new('mullvad', 'mullvadr',
+        # This needs improving, want to remove if statements per not compatible function
+        if platform.linux_distribution()[0] == 'Fedora':
+            self.ind = appindicator.Indicator.new('mullvad', 'mullvadr',
                                           appindicator.IndicatorCategory.COMMUNICATIONS)
-        self.ind.set_menu(menu)
-        self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
+            self.ind.set_menu(menu)
+            self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
+
+        else:
+            self.ind = appindicator.Indicator('mullvad', 'mullvadr',
+                                              appindicator.CATEGORY_COMMUNICATIONS)
+            self.ind.set_menu(menu)
+            self.ind.set_status(appindicator.STATUS_ACTIVE)
 
     def enableConnectMenu(self, enable):
         self.connectItem.set_sensitive(enable)
@@ -2099,7 +2107,11 @@ def _create_tunnel(settings):
 def _start_gui(app, root_window, log, settings, tunnel):
     if got_appindicator:
         tray_ui = AppIndicator(root_window, tunnel, settings)
-        Gdk.threads_init()
+        if platform.linux_distribution()[0] == 'Fedora':
+            Gdk.threads_init()
+        else:
+            gtk.gdk.threads_init()
+
     else:
         tray_ui = TunnelTaskBarIcon(root_window, tunnel, settings)
     app.tray_ui = tray_ui
