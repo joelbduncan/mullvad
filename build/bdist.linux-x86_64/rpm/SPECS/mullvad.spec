@@ -1,7 +1,7 @@
 %define name mullvad
-%define version 62
-%define unmangled_version 62
-%define unmangled_version 62
+%define version 63
+%define unmangled_version 63
+%define unmangled_version 63
 %define release 1
 
 Summary: The Mullvad VPN Client

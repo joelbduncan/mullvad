@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mullvad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 14:49+0100\n"
+"POT-Creation-Date: 2017-05-27 18:22+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English\n"
@@ -277,6 +277,15 @@ msgstr ""
 msgid "Australia"
 msgstr ""
 
+msgid "Australia - Melbourne"
+msgstr ""
+
+msgid "Australia - Sydney"
+msgstr ""
+
+msgid "Australia - Perth"
+msgstr ""
+
 msgid "Belgium"
 msgstr ""
 
@@ -310,6 +319,12 @@ msgstr ""
 msgid "Germany"
 msgstr ""
 
+msgid "Germany - Berlin"
+msgstr ""
+
+msgid "Germany - Frankfurt"
+msgstr ""
+
 msgid "Denmark"
 msgstr ""
 
@@ -335,6 +350,15 @@ msgid "United Kingdom - Scotland"
 msgstr ""
 
 msgid "United Kingdom - Wales"
+msgstr ""
+
+msgid "United Kingdom - Coventry"
+msgstr ""
+
+msgid "United Kingdom - London"
+msgstr ""
+
+msgid "United Kingdom - Manchester"
 msgstr ""
 
 msgid "Greece"
@@ -434,6 +458,9 @@ msgid "USA - Colorado"
 msgstr ""
 
 msgid "USA - Connecticut"
+msgstr ""
+
+msgid "USA - District of Columbia"
 msgstr ""
 
 msgid "USA - Delaware"

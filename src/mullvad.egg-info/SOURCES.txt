@@ -67,5 +67,3 @@ src/mullvad/locale/tr/LC_MESSAGES/mullvad.mo
 src/mullvad/ssl/ca.crt
 src/mullvad/ssl/crl.pem
 src/mullvad/ssl/master.mullvad.net.crt
-src/tests/__init__.py
-src/tests/test_config.py

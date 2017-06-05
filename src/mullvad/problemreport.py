@@ -11,6 +11,8 @@ import locale
 import os
 import platform
 import urllib
+import re
+import getpass
 
 from mullvad import logger
 from mullvad import proc
@@ -21,12 +23,15 @@ from mullvad import version
 class ProblemReport:
 
     def __init__(self, settings):
+        self.log = logger.create_logger(self.__class__.__name__)
+        self.settings = settings
+
         self.user_message = ''
         self.email_address = ''
-        self.settings = unicode(str(settings), errors='replace')
-        self.debug_log = self._read_file(logger.get_debug_log_path())
-        self.debug_log_old = self._read_file(
-            logger.get_debug_log_backup_path())
+        self.debug_log = self._remove_id_and_username(
+            self._read_file(logger.get_debug_log_path()))
+        self.debug_log_old = self._remove_id_and_username(
+            self._read_file(logger.get_debug_log_backup_path()))
         self.openvpn_log = self._filtered_openvpn_log(
             logger.get_openvpn_path())
         self.openvpn_log_old = self._filtered_openvpn_log(
@@ -49,7 +54,7 @@ class ProblemReport:
         report += '\n-----------------------\n'
         report += self.platform_info()
         report += '\n-----------------------\n'
-        report += self.settings
+        report += self._settings_to_string()
         report += '\n-----------------------\n'
         report += 'Debug log:\n'
         report += self.debug_log
@@ -66,6 +71,7 @@ class ProblemReport:
         report += self.routes
         report += '\n-----------------------\n'
         report += self.dns
+
         return report
 
     def platform_info(self):
@@ -114,6 +120,8 @@ class ProblemReport:
                         line = unicode(line, errors='replace')
                         if 'MANAGEMENT: CMD \'state\'' not in line:
                             data += line
+
+                data = self._remove_id_and_username(data)
             except IOError, e:
                 data = unicode(e)
         else:
@@ -121,7 +129,11 @@ class ProblemReport:
         return data
 
     def _get_routes(self):
-        return proc.try_run(['netstat', '-r', '-n'])
+        routes = proc.try_run(['netstat', '-r', '-n'])
+
+        # Remove MAC addresses from the netstat output:
+        #  Match two hexadecimal characters followed by a space at least four times
+        return re.sub('([\da-fA-F][\da-fA-F] ){4,}', 'MAC ADDRESS ', routes)
 
     def _get_dns(self):
         if platform.system() == 'Windows':
@@ -130,6 +142,23 @@ class ProblemReport:
             return proc.try_run(['scutil', '--dns'])
         else:
             return self._read_file('/etc/resolv.conf')
+
+    def _settings_to_string(self):
+        unicode_string = unicode(str(self.settings), errors='replace')
+        return self._remove_id_and_username(unicode_string)
+
+    def _remove_id_and_username(self, text):
+        try:
+            username = getpass.getuser()
+            text = text.replace(username, '[OMITTED]')
+        except:
+            self.log.warning('Unable to get the name of the logged in user, the username cannot be removed from the logs')
+
+        account_number = self.settings.get('id')
+        if account_number:
+            text = text.replace(account_number, '[OMITTED]')
+
+        return text
 
 
 if __name__ == '__main__':

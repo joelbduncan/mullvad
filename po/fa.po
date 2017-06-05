@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mullvad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 14:49+0100\n"
+"POT-Creation-Date: 2017-05-27 18:22+0200\n"
 "PO-Revision-Date: 2016-11-22 15:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: Persian\n"
@@ -300,6 +300,18 @@ msgstr "اتریش"
 msgid "Australia"
 msgstr "استرالیا"
 
+#, fuzzy
+msgid "Australia - Melbourne"
+msgstr "استرالیا"
+
+#, fuzzy
+msgid "Australia - Sydney"
+msgstr "استرالیا"
+
+#, fuzzy
+msgid "Australia - Perth"
+msgstr "استرالیا"
+
 msgid "Belgium"
 msgstr "بلژیک"
 
@@ -333,6 +345,13 @@ msgstr "جمهوری چک"
 msgid "Germany"
 msgstr "آلمان"
 
+#, fuzzy
+msgid "Germany - Berlin"
+msgstr "آلمان"
+
+msgid "Germany - Frankfurt"
+msgstr ""
+
 msgid "Denmark"
 msgstr "دانمارک"
 
@@ -358,6 +377,18 @@ msgid "United Kingdom - Scotland"
 msgstr "بریتانیا - اسکاتلند"
 
 msgid "United Kingdom - Wales"
+msgstr "بریتانیا - ولز"
+
+#, fuzzy
+msgid "United Kingdom - Coventry"
+msgstr "بریتانیا - ولز"
+
+#, fuzzy
+msgid "United Kingdom - London"
+msgstr "بریتانیا - اسکاتلند"
+
+#, fuzzy
+msgid "United Kingdom - Manchester"
 msgstr "بریتانیا - ولز"
 
 msgid "Greece"
@@ -458,6 +489,10 @@ msgstr "ایالات متحده - کلرادو"
 
 msgid "USA - Connecticut"
 msgstr "ایالات متحده - کانکتیکات"
+
+#, fuzzy
+msgid "USA - District of Columbia"
+msgstr "ایالات متحده - کارولینای شمالی"
 
 msgid "USA - Delaware"
 msgstr "ایالات متحده - دلاور"

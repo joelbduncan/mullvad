@@ -1,3 +1,28 @@
+Mullvad 63 (2017-05-29)
+=======================
+- Show error to user instead of crash if bootstrapping credentials on first
+  connect fails.
+- Add extra fallback for how to reach master. Should improve the situations for
+  users on networks that hijack packets on port 53
+- Automatically install pip dependencies when installing from source dist
+- Enable "Block the internet on connection failure" by default
+- Enable "Stop DNS leaks" by default
+- Increase privacy in error reports by removing MAC addresses, usernames and account numbers
+- Increase speed by preferring UDP connections to our servers over TCP
+- Upgrade bundled OpenVPN to 2.4.2
+- Allow custom arguments to OpenVPN
+
+Windows specific
+----------------
+- Install NDIS5 version of TAP driver on Windows 7. Should improve throughput on
+  some Windows 7 machines.
+- Make sure the TAP interface has the lowest metric to speed up DNS queries on
+  Windows 10 Creators Update
+
+Linux specific
+--------------
+- Fix broken dependency on net-tools
+
 Mullvad 62 (2017-03-14)
 =======================
 - Make fewer connection attempts when fetching the server list before setting

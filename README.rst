@@ -126,10 +126,13 @@ Run ``build.bat`` on the Windows build machine
 Installing from source distribution
 -------------------------------------------------------
 
-::
+Build the package from source::
 
-    pip install appdirs ipaddr netifaces psutil
     pip install mullvad-XX.tar.gz  # XX is the version that you have
 
-You also need the other dependencies: openvpn, python-wxgtk3.0 or python-wxgtk2.8, python-gtk2, python-appindicator and resolvconf.
+Install the run-time dependencies::
+
+    sudo aptitude install openvpn resolvconf
+    sudo aptitude install python-wxgtk3.0 python-gtk2 python-appindicator
+
 If you want to use obfsproxy you have to build it yourself from https://git.torproject.org/debian/obfsproxy-legacy.git as the newer versions currently don't work with Mullvad.

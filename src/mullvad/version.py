@@ -6,6 +6,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 
-CLIENT_VERSION = '62'
+CLIENT_VERSION = '63'
 _AUTHOR = 'mullvad'
 _APP_NAME = 'mullvad'

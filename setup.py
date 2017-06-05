@@ -48,6 +48,14 @@ common_args = dict(
 
     packages=find_packages('src', exclude=['tests']),
 
+    install_requires=[
+        'appdirs',
+        'ipaddr',
+        'netifaces',
+        'psutil',
+        'wxPython',
+    ],
+
     extras_require={
         'obfsproxy': ['obfsproxy'],
     },

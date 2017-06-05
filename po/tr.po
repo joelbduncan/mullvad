@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mullvad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-10 13:05+0100\n"
+"POT-Creation-Date: 2017-05-27 18:22+0200\n"
 "PO-Revision-Date: 2017-02-10 13:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
@@ -306,6 +306,18 @@ msgstr "Avusturya"
 msgid "Australia"
 msgstr "Avustralya"
 
+#, fuzzy
+msgid "Australia - Melbourne"
+msgstr "Avustralya"
+
+#, fuzzy
+msgid "Australia - Sydney"
+msgstr "Avustralya"
+
+#, fuzzy
+msgid "Australia - Perth"
+msgstr "Avustralya"
+
 msgid "Belgium"
 msgstr "Belçika"
 
@@ -339,6 +351,13 @@ msgstr "Çekya"
 msgid "Germany"
 msgstr "Almanya"
 
+#, fuzzy
+msgid "Germany - Berlin"
+msgstr "Almanya"
+
+msgid "Germany - Frankfurt"
+msgstr ""
+
 msgid "Denmark"
 msgstr "Danimarka"
 
@@ -364,6 +383,18 @@ msgid "United Kingdom - Scotland"
 msgstr "Birleşik Krallık - İskoçya"
 
 msgid "United Kingdom - Wales"
+msgstr "Birleşik Krallık - Galler"
+
+#, fuzzy
+msgid "United Kingdom - Coventry"
+msgstr "Birleşik Krallık - Galler"
+
+#, fuzzy
+msgid "United Kingdom - London"
+msgstr "Birleşik Krallık - İskoçya"
+
+#, fuzzy
+msgid "United Kingdom - Manchester"
 msgstr "Birleşik Krallık - Galler"
 
 msgid "Greece"
@@ -464,6 +495,10 @@ msgstr "ABD - Colorado"
 
 msgid "USA - Connecticut"
 msgstr "ABD - Connecticut"
+
+#, fuzzy
+msgid "USA - District of Columbia"
+msgstr "ABD - North Carolina"
 
 msgid "USA - Delaware"
 msgstr "ABD - Delaware"

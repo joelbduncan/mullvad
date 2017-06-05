@@ -16,6 +16,7 @@ import sys
 import threading
 import time
 import traceback
+import netifaces
 
 import ipaddr
 
@@ -44,6 +45,8 @@ _OPENVPN_MANAGEMENT_PORT = 7505
 _GW_CHECK_INTERVAL = 30
 
 _MASTER_VIA_RELAY_PORT = 53
+_MASTER_PORT = 51678
+_MASTER_IP = '193.138.219.42'
 
 _SEND_RECV_BUFFERS_MIN = 8192
 _SEND_RECV_BUFFERS_MAX = 67108864
@@ -81,6 +84,10 @@ class OpenVPNManagement:
         self.sock.recv(500)
 
     def connection_state(self):
+        result = self.connection_info()
+        return result.split(',')[1]
+
+    def connection_info(self):
         self.sock.sendall('state' + '\n')
         result = ''
         while not result.endswith('END\r\n'):
@@ -88,7 +95,7 @@ class OpenVPNManagement:
             if new == '':
                 raise socket.error('closed')
             result += new
-        return result.split(',')[1]
+        return result
 
     def kill(self):
         self.sock.sendall('signal SIGINT' + '\n')
@@ -297,8 +304,7 @@ class Tunnel:
 
     def _connectMaster(self):
         master = None
-        port = _MASTER_VIA_RELAY_PORT
-        for address in self._ordered_master_connection_addresses():
+        for address, port in self._ordered_master_connection_addresses():
             # Add route to master/proxy if Stop DNS leaks enabled
             if self.settings.getboolean('delete_default_route'):
                 self.route_manager.route_add(address)
@@ -327,9 +333,9 @@ class Tunnel:
         other_servers = set()
         for server in self._get_servers():
             if self._is_match(server):
-                preferred_servers.add(server.address)
+                preferred_servers.add((server.address, _MASTER_VIA_RELAY_PORT))
             else:
-                other_servers.add(server.address)
+                other_servers.add((server.address, _MASTER_VIA_RELAY_PORT))
         preferred_servers = list(preferred_servers)
         other_servers = list(other_servers)
 
@@ -338,10 +344,12 @@ class Tunnel:
 
         custom_server = self._custom_server()
         if custom_server is not None:
-            servers_to_try = [custom_server.address]
+            servers_to_try = [(custom_server.address, _MASTER_VIA_RELAY_PORT)]
         else:
-            servers_to_try = preferred_servers[:4]
+            servers_to_try = preferred_servers[:3]
 
+        # Try connecting through the real master if the preferred fails
+        servers_to_try.append((_MASTER_IP, _MASTER_PORT))
         # Add a few totally random servers to the list of servers to try.
         # Do this in case all preferred servers are down. Say the customer
         # has selected one country where we have only few servers, and that
@@ -420,6 +428,11 @@ class Tunnel:
                     raise ObfsproxyMissingError()
                 else:
                     raise
+
+        custom_args = self.settings.get('custom_ovpn_args')
+        if custom_args:
+            self.log.debug('Using custom OpenVPN arguments: %s', custom_args)
+            ovpn_args.extend(map(lambda x: (x,), custom_args.split(' ')))
 
         # Use the slightly modified up/down scripts provided by Tunnelblick to
         # configure the DNS settings and also restore them should the be
@@ -544,8 +557,12 @@ class Tunnel:
             self.openvpnManagement.close()
         except Exception:
             pass
+
         if result == ConState.connected:
             self.openvpnManagement = OpenVPNManagement()
+            if platform.system() == 'Windows':
+                self._attempt_to_set_lowest_metric()
+
         return result
 
     def _removeBlockAndGateway(self):
@@ -631,6 +648,11 @@ class Tunnel:
         # Connect to the master
         master = self._connectMaster()
         customerId = self.settings.getint('id')
+
+        if master is None and not self._has_client_credentials():
+            message = 'Unable to fetch account credentials.'
+            self._masterFailure('bootstrap_failed', message)
+            raise ConnectError(message)
 
         # Get a certificate
         if master is not None:
@@ -767,6 +789,7 @@ class Tunnel:
                 # public DNS if the local network is blocked.
                 self.log.debug('Forcing \'Stop DNS Leaks\'')
                 stop_dns_leaks = True
+
             if stop_dns_leaks:
                 self.dnsconfig.set([DNSserver])
                 # Backup DNS so that it may be used if master is not reachable
@@ -789,6 +812,55 @@ class Tunnel:
 
         self.log.debug('dying')
         return result
+
+    def _attempt_to_set_lowest_metric(self):
+        # Windows 10 Creators Update sends DNS queries sequentially to all
+        # network interfaces. The order in which the interfaces are queried
+        # is determined by their metrics. Since we only allow internet access
+        # through our TAP interface every DNS query to an interface with a
+        # metric lower than our TAP interface will timeout, making DNS extremely slow.
+        # This method sets the metric of our TAP interface to 0 so that we will almost
+        # always be asked first, thus removing the timeouts.
+
+        try:
+            tap_interface = self._get_tap_interface_name()
+            if tap_interface is None:
+                self.log.debug('Could not set interface metric, unable to find the TAP interface')
+                return
+
+            new_metric = 0
+            self.log.debug('Setting the metric of %s to %s', tap_interface, new_metric)
+
+            proc.run_assert_ok(['netsh', 'interface', 'ip', 'set', 'interface', tap_interface, 'metric=' + str(new_metric)])
+        except Exception as e:
+            self.log.debug('Failed to set metric: %s', e)
+
+    def _get_tap_interface_name(self):
+        raw = self.openvpnManagement.connection_info()
+        ip = raw.split(',')[3]
+        interface_uuid = self._ip_to_interface_uuid(ip)
+        return self._interface_uuid_to_name(interface_uuid)
+
+    def _ip_to_interface_uuid(self, ip):
+        for iface in netifaces.interfaces():
+            address_families = netifaces.ifaddresses(iface)
+            for address_family, addresses in address_families.iteritems():
+                ip_addresses = map(lambda a: a['addr'], addresses)
+
+                if ip in ip_addresses:
+                    return iface
+
+        return None
+
+    def _interface_uuid_to_name(self, uuid):
+        raw = proc.run_assert_ok([bins.openvpn, '--show-adapters'])
+        lines = raw.split('\n')
+        for line in lines:
+            if uuid in line:
+                parts = line.rsplit(' ', 1)
+                return parts[0].replace('\'', '')
+
+        return None
 
     def _disconnect(self):
         self.server = None
@@ -916,6 +988,14 @@ class Tunnel:
         __, key_modulus, __ = proc.run(
             [bins.openssl, 'rsa', '-in', key_path, '-modulus', '-noout'])
         return cert_modulus == key_modulus
+
+    def _has_client_credentials(self):
+        cid = self.settings.getint('id')
+        if cid is None:
+            return False
+        has_key = os.path.exists(self.ssl_keys.get_client_key_path(cid))
+        has_cert = os.path.exists(self.ssl_keys.get_client_cert_path(cid))
+        return has_key and has_cert
 
     def _refresh_master_cert(self, master):
         master_cert = master.getCertificate()
@@ -1078,12 +1158,14 @@ class Tunnel:
     def _select_server(self, servers):
         """Choose a server from a given list of servers.
 
-        The choice is random but if servers with AES-256 encryption available
-        are present, other servers will be excluded.
+        The choice is random but UDP connections are preferred over
+        TCP. This is because all servers use AES, and TCP and AES is less
+        optimal than UDP and AES.
         """
-        aes_servers = filter(lambda s: s.cipher == 'aes256', servers)
-        if len(aes_servers) > 0:
-            servers = aes_servers
+        udp_servers = filter(lambda s: s.protocol == 'udp', servers)
+        if len(udp_servers) > 0:
+            servers = udp_servers
+
         selected = random.choice(servers)
         self.log.debug('Selected server: %s', selected)
         return selected

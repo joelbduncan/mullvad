@@ -27,14 +27,14 @@ _OLD_SETTINGS_FILES = {'Windows': ['settings.ini'],
 _SETTINGS_SECTION = 'Client'
 
 _DEFAULT_SETTINGS = {
-    'delete_default_route': 'False',
+    'delete_default_route': 'True',
     'tunnel_ipv6': 'False',
     'location': 'se',
     'protocol': 'any',
     'server': 'any',
     'port': 'any',
     'cipher': 'any',
-    'stop_dns_leaks': 'False',
+    'stop_dns_leaks': 'True',
     'obfsproxy': 'auto',
     'block_local_network': 'False',
     'timeout': '35',
@@ -42,12 +42,8 @@ _DEFAULT_SETTINGS = {
     'block_incoming_udp': 'True',
     'send_recv_buffers': 'auto',
     'autoconnect_on_start': 'True',
+    'custom_ovpn_args': '',
 }
-
-# On Windows we activate Stop DNS leaks by default since it seems to work
-# better for most users on that platform.
-if platform.system() == 'Windows':
-    _DEFAULT_SETTINGS['stop_dns_leaks'] = 'True'
 
 # Increase socket buffer sizes on Windows 7 and earlier.
 # Greatly increases speed over UDP sockets.
@@ -215,7 +211,7 @@ class Settings(ReadOnlySettings):
         This method simply removes extra lines from settings values.
         """
         for option, old_value in self.parser.items(_SETTINGS_SECTION):
-            value = str(old_value)
+            value = old_value.encode('ascii', 'ignore')
             if len(value) > 0:
                 value = value.splitlines()[0]  # Remove strange other rows
             self.parser.set(_SETTINGS_SECTION, option, value)

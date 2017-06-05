@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: mullvad
-Version: 62
+Version: 63
 Summary: The Mullvad VPN Client
 Home-page: https://www.mullvad.net/
 Author: Amagicom AB
@@ -134,13 +134,41 @@ Description: Mullvad VPN Client Build Instructions
         Installing from source distribution
         -------------------------------------------------------
         
-        ::
+        Build the package from source::
         
-            pip install appdirs ipaddr netifaces psutil
             pip install mullvad-XX.tar.gz  # XX is the version that you have
         
-        You also need the other dependencies: openvpn, python-wxgtk3.0 or python-wxgtk2.8, python-gtk2, python-appindicator and resolvconf.
+        Install the run-time dependencies::
+        
+            sudo aptitude install openvpn resolvconf
+            sudo aptitude install python-wxgtk3.0 python-gtk2 python-appindicator
+        
         If you want to use obfsproxy you have to build it yourself from https://git.torproject.org/debian/obfsproxy-legacy.git as the newer versions currently don't work with Mullvad.
+        
+        Mullvad 63 (2017-05-29)
+        =======================
+        - Show error to user instead of crash if bootstrapping credentials on first
+          connect fails.
+        - Add extra fallback for how to reach master. Should improve the situations for
+          users on networks that hijack packets on port 53
+        - Automatically install pip dependencies when installing from source dist
+        - Enable "Block the internet on connection failure" by default
+        - Enable "Stop DNS leaks" by default
+        - Increase privacy in error reports by removing MAC addresses, usernames and account numbers
+        - Increase speed by preferring UDP connections to our servers over TCP
+        - Upgrade bundled OpenVPN to 2.4.2
+        - Allow custom arguments to OpenVPN
+        
+        Windows specific
+        ----------------
+        - Install NDIS5 version of TAP driver on Windows 7. Should improve throughput on
+          some Windows 7 machines.
+        - Make sure the TAP interface has the lowest metric to speed up DNS queries on
+          Windows 10 Creators Update
+        
+        Linux specific
+        --------------
+        - Fix broken dependency on net-tools
         
         Mullvad 62 (2017-03-14)
         =======================
