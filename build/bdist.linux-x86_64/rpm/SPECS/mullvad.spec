@@ -16,7 +16,7 @@ Prefix: %{_prefix}
 BuildArch: noarch
 Vendor: Amagicom AB <admin@mullvad.net>
 Url: https://www.mullvad.net/
-requires: python-appdirs, python-ipaddr, python-netifaces, python-psutil, wxPython, libappindicator-gtk
+requires: python-appdirs, python-ipaddr, python-netifaces, python-psutil, wxPython, libappindicator-gtk3
 
 %description
 Mullvad VPN Client Build Instructions
